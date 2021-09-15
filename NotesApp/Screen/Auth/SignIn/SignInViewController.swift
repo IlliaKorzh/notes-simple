@@ -6,12 +6,32 @@
 //
 
 import UIKit
+import Moya
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
+    let userProvider = MoyaProvider<UserService>()
+    
+ //check how works request
+    @IBAction func didTapContinue(_sender: Any){
+        let userEmail = email.text
+        let userPassword = password.text
+        userProvider.request(.signIn(email: userEmail ?? "example@mail.com", password: userPassword ?? "")) { result in
+            switch result {
+            case .success(let response):
+                print(try? JSONSerialization.jsonObject(with: response.data, options: []))
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
 

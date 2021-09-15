@@ -23,9 +23,9 @@ class MainViewModel: ViewModel {
         self.viewController = viewController
     }
     
-    init() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            self.viewController.flow = .notes
-        }
-    }
+//    init() {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+//            self.viewController.flow = .notes
+//        }
+//    }
 }

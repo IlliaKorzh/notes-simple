@@ -6,7 +6,7 @@ target 'NotesApp' do
   use_frameworks!
 
 
-  pod 'Alamofire', '~> 5.4'
+  pod 'Moya', '~> 15.0'
 
   # Pods for NotesApp
 
