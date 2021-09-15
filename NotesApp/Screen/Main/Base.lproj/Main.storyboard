@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bVe-IF-lN3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes-->
+        <scene sceneID="RaN-lA-TCL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0a-vW-mzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Notes" id="fjk-Bf-Wfp" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="265"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="jpr-KY-iyx">
+            <objects>
+                <viewController id="bVe-IF-lN3" customClass="MainViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G5i-iI-zeV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrK-64-8SL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="fjk-Bf-Wfp" kind="embed" identifier="com.segue.notes" id="SaT-76-QB1"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-xN-bQi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="LQR-ut-Lni" kind="embed" identifier="com.segue.auth" id="5h0-jD-xGP"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cKt-tO-Wb1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B5Y-xN-bQi" firstAttribute="leading" secondItem="G5i-iI-zeV" secondAttribute="leading" id="27W-U7-6Ou"/>
+                            <constraint firstAttribute="bottom" secondItem="B5Y-xN-bQi" secondAttribute="bottom" id="Bph-KW-9em"/>
+                            <constraint firstItem="MrK-64-8SL" firstAttribute="top" secondItem="G5i-iI-zeV" secondAttribute="top" id="CR3-f3-nRQ"/>
+                            <constraint firstItem="B5Y-xN-bQi" firstAttribute="top" secondItem="G5i-iI-zeV" secondAttribute="top" id="FJA-iL-Hse"/>
+                            <constraint firstItem="MrK-64-8SL" firstAttribute="trailing" secondItem="G5i-iI-zeV" secondAttribute="trailing" id="ODS-kT-qcl"/>
+                            <constraint firstItem="B5Y-xN-bQi" firstAttribute="trailing" secondItem="G5i-iI-zeV" secondAttribute="trailing" id="h1W-M7-DVP"/>
+                            <constraint firstItem="MrK-64-8SL" firstAttribute="leading" secondItem="G5i-iI-zeV" secondAttribute="leading" id="oqK-pk-GoA"/>
+                            <constraint firstAttribute="bottom" secondItem="MrK-64-8SL" secondAttribute="bottom" id="pE6-z6-K4C"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SqR-V9-nU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="2uJ-Iy-hIP" customClass="MainBuilder" customModule="NotesApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="bVe-IF-lN3" id="fuH-sk-yBF"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="793" y="395"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="dac-OK-G9C">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nuz-ec-vDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Auth" id="LQR-ut-Lni" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="411"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

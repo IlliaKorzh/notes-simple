@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FVZ-oL-YzW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign in-->
+        <scene sceneID="zYx-pg-ion">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCo-oa-7gu" sceneMemberID="firstResponder"/>
+                <viewController id="dwZ-Cl-SI2" customClass="SignInViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ucq-tp-aHL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="16" affinity="minX"/>
+                            <userLayoutGuide location="398" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="FD5-Ll-K5N">
+                                <rect key="frame" x="87" y="832" width="240" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmF-MK-7vh">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-FL-pFl">
+                                        <rect key="frame" x="188" y="0.0" width="52" height="30"/>
+                                        <state key="normal" title="Sign up">
+                                            <color key="titleColor" systemColor="systemGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="eFK-j0-8ek" kind="show" id="mcD-rt-wgJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Add-uy-SUn">
+                                <rect key="frame" x="16" y="281.5" width="382" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPV-pA-r2y">
+                                        <rect key="frame" x="48" y="8" width="286.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7L-tY-pBD">
+                                        <rect key="frame" x="48" y="50" width="286.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-mA-SXE">
+                                        <rect key="frame" x="48" y="92" width="286.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1oO-7D-VUl"/>
+                                        </constraints>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sxg-mA-SXE" firstAttribute="width" secondItem="Add-uy-SUn" secondAttribute="width" multiplier="0.75" id="NlS-HZ-YZW"/>
+                                    <constraint firstItem="y7L-tY-pBD" firstAttribute="width" secondItem="Add-uy-SUn" secondAttribute="width" multiplier="0.75" id="QTc-Ty-5mu"/>
+                                    <constraint firstItem="fPV-pA-r2y" firstAttribute="width" secondItem="Add-uy-SUn" secondAttribute="width" multiplier="0.75" id="aqI-wV-TK9"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mCJ-uI-9K3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Add-uy-SUn" firstAttribute="centerY" secondItem="mCJ-uI-9K3" secondAttribute="centerY" multiplier="0.75" id="Co4-6H-AD6"/>
+                            <constraint firstItem="mCJ-uI-9K3" firstAttribute="bottom" secondItem="FD5-Ll-K5N" secondAttribute="bottom" id="QFN-Cf-c6t"/>
+                            <constraint firstItem="FD5-Ll-K5N" firstAttribute="centerX" secondItem="mCJ-uI-9K3" secondAttribute="centerX" id="QbV-Sf-BUO"/>
+                            <constraint firstItem="Add-uy-SUn" firstAttribute="centerX" secondItem="mCJ-uI-9K3" secondAttribute="centerX" id="Uvq-BB-PjO"/>
+                            <constraint firstItem="FD5-Ll-K5N" firstAttribute="width" relation="lessThanOrEqual" secondItem="mCJ-uI-9K3" secondAttribute="width" id="jYl-aT-2vX"/>
+                            <constraint firstItem="Add-uy-SUn" firstAttribute="width" secondItem="mCJ-uI-9K3" secondAttribute="width" constant="-32" id="jlZ-dG-QPQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign in" id="EYh-es-ij9"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="981.15942028985512" y="75.669642857142847"/>
+        </scene>
+        <!--Sign up-->
+        <scene sceneID="rcj-i4-Tp9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3AM-Ct-njA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="eFK-j0-8ek" customClass="SignUpViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5u-Q5-paG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="16" affinity="minX"/>
+                            <userLayoutGuide location="398" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-ia-DdR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jYf-8i-8rC">
+                                        <rect key="frame" x="16" y="8" width="382" height="758"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qtx-Mh-PL6">
+                                                <rect key="frame" x="0.0" y="8" width="382" height="676"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFY-1r-6of" customClass="DesignableView" customModule="NotesApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="330"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zi-Lo-B56">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="JqK-BU-zPC"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="3zi-Lo-B56" firstAttribute="leading" secondItem="CFY-1r-6of" secondAttribute="leading" id="5pb-en-dBh"/>
+                                                            <constraint firstItem="3zi-Lo-B56" firstAttribute="top" secondItem="CFY-1r-6of" secondAttribute="top" id="EzO-8T-w65"/>
+                                                            <constraint firstAttribute="trailing" secondItem="3zi-Lo-B56" secondAttribute="trailing" id="Sph-Ot-464"/>
+                                                            <constraint firstAttribute="bottom" secondItem="3zi-Lo-B56" secondAttribute="bottom" id="XFc-bv-Tp1"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.10000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                                <real key="value" value="-3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XjR-EE-Qjf" customClass="DesignableView" customModule="NotesApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="346" width="382" height="330"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05e-Ca-DAU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="330"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="05e-Ca-DAU" secondAttribute="trailing" id="8y2-nE-R8d"/>
+                                                            <constraint firstAttribute="bottom" secondItem="05e-Ca-DAU" secondAttribute="bottom" id="ViD-T2-eET"/>
+                                                            <constraint firstItem="05e-Ca-DAU" firstAttribute="leading" secondItem="XjR-EE-Qjf" secondAttribute="leading" id="b1B-bp-eGY"/>
+                                                            <constraint firstItem="05e-Ca-DAU" firstAttribute="top" secondItem="XjR-EE-Qjf" secondAttribute="top" id="jb4-Fm-cbW"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.10000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                                                <real key="value" value="-3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArR-44-AMk">
+                                                <rect key="frame" x="0.0" y="700" width="382" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="CLt-uE-hH3"/>
+                                                </constraints>
+                                                <state key="normal" title="Register">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="exn-LL-rrP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="exn-LL-rrP" firstAttribute="bottom" secondItem="eCC-ia-DdR" secondAttribute="bottom" id="4St-fX-1ab"/>
+                            <constraint firstItem="eCC-ia-DdR" firstAttribute="top" secondItem="exn-LL-rrP" secondAttribute="top" id="Jsc-v4-zle"/>
+                            <constraint firstItem="eCC-ia-DdR" firstAttribute="leading" secondItem="exn-LL-rrP" secondAttribute="leading" id="YCN-4v-qjQ"/>
+                            <constraint firstItem="exn-LL-rrP" firstAttribute="trailing" secondItem="eCC-ia-DdR" secondAttribute="trailing" id="gdA-in-RmP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign up" id="l3o-LL-tky"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1739.1304347826087" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ABe-tb-0Ea">
+            <objects>
+                <navigationController id="FVZ-oL-YzW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8so-9l-Nnk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dwZ-Cl-SI2" kind="relationship" relationship="rootViewController" id="GS0-Q0-0FP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGD-pg-rTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71.014492753623188" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
