@@ -11,8 +11,8 @@
         <!--Notes-->
         <scene sceneID="RaN-lA-TCL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f0a-vW-mzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Notes" id="fjk-Bf-Wfp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0a-vW-mzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1326" y="265"/>
         </scene>
@@ -63,8 +63,8 @@
         <!--Auth-->
         <scene sceneID="dac-OK-G9C">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nuz-ec-vDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Auth" id="LQR-ut-Lni" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nuz-ec-vDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1350" y="411"/>
         </scene>

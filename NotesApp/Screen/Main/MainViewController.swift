@@ -8,6 +8,7 @@
 import UIKit
 
 extension MainViewController {
+    
     enum Flow {
         case auth, notes
         
