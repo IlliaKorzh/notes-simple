@@ -9,7 +9,7 @@ import UIKit
 
 protocol ViewModel {
     
-//    associatedtype ViewController
+    associatedtype ViewController: UIViewController
     
-    func bind(viewController: UIViewController)
+    func bind(viewController: ViewController)
 }

@@ -13,11 +13,3 @@ struct UserAccess: Codable {
   let name: String
   let email: String
 }
-
-extension User {
-  init(access: UserAccess) {
-    id = access.id
-    name = access.name
-    email = access.email
-  }
-}

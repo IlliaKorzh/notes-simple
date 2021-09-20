@@ -8,11 +8,11 @@
 import Foundation
 import Moya
 
-protocol APIProtocol {
+protocol UserAPIProtocol {
 
-    var provider: MoyaProvider<UserService> { get }
     
     func signUp(name: String?, email: String, password: String, completion: @escaping (Result<UserAccess, Error>) -> Void)
     
     func signIn(email: String, password: String, completion: @escaping (Result<UserAccess, Error>) -> Void)
+    
 }

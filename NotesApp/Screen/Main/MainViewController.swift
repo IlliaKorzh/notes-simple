@@ -18,7 +18,7 @@ extension MainViewController {
     }
 }
 
-@objc class MainViewController: ViewController {
+class MainViewController: ViewController<MainViewModel> {
     
     var flow: Flow = .auth {
         didSet {

@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4C62BF6CD38326F088226384 /* Pods_NotesApp_NotesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0235C21AED8869EAB32C14 /* Pods_NotesApp_NotesAppUITests.framework */; };
+		B62C408326F8A405006960ED /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408226F8A405006960ED /* UserAPI.swift */; };
+		B62C408726F8A4E3006960ED /* NotesAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408626F8A4E3006960ED /* NotesAPIProtocol.swift */; };
+		B62C408926F8A4ED006960ED /* NotesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408826F8A4ED006960ED /* NotesAPI.swift */; };
+		B62C408B26F8A7D3006960ED /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408A26F8A7D2006960ED /* Note.swift */; };
+		B62C408D26F8AA6E006960ED /* NoteTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408C26F8AA6E006960ED /* NoteTarget.swift */; };
+		B62C408F26F8B071006960ED /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408E26F8B071006960ED /* SignInViewModel.swift */; };
+		B62C409126F8B083006960ED /* SignInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C409026F8B083006960ED /* SignInBuilder.swift */; };
 		B631AD8426EA3E3E00A2F2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AD8326EA3E3E00A2F2A7 /* AppDelegate.swift */; };
 		B631AD8626EA3E3E00A2F2A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AD8526EA3E3E00A2F2A7 /* SceneDelegate.swift */; };
 		B631AD8826EA3E3E00A2F2A7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AD8726EA3E3E00A2F2A7 /* SignInViewController.swift */; };
@@ -18,7 +25,7 @@
 		B631AD9E26EA3E4100A2F2A7 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AD9D26EA3E4100A2F2A7 /* NotesAppTests.swift */; };
 		B631ADA926EA3E4100A2F2A7 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631ADA826EA3E4100A2F2A7 /* NotesAppUITests.swift */; };
 		B64ABEBB26EF64C7000FEA0F /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEBA26EF64C7000FEA0F /* RegisterModel.swift */; };
-		B64ABEBF26EF9075000FEA0F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEBE26EF9075000FEA0F /* APIManager.swift */; };
+		B64ABEBF26EF9075000FEA0F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEBE26EF9075000FEA0F /* API.swift */; };
 		B64ABEC526F09BAB000FEA0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEC426F09BAB000FEA0F /* SignUpViewController.swift */; };
 		B64ABEC726F0BE31000FEA0F /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEC626F0BE31000FEA0F /* NotesViewController.swift */; };
 		B64ABEDA26F0EE8E000FEA0F /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64ABED926F0EE8E000FEA0F /* Auth.storyboard */; };
@@ -28,10 +35,9 @@
 		B64ABEE426F0FF50000FEA0F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEE326F0FF50000FEA0F /* MainViewModel.swift */; };
 		B64ABEE626F10100000FEA0F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEE526F10100000FEA0F /* ViewModel.swift */; };
 		B64ABEE826F10A1B000FEA0F /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEE726F10A1B000FEA0F /* MainBuilder.swift */; };
-		B660691926F32D3900E7A198 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660691826F32D3900E7A198 /* APIProtocol.swift */; };
+		B660691926F32D3900E7A198 /* UserAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660691826F32D3900E7A198 /* UserAPIProtocol.swift */; };
 		B660691B26F372F200E7A198 /* UserAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660691A26F372F200E7A198 /* UserAccess.swift */; };
-		B68C5DB026F206A100706D1E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C5DAF26F206A100706D1E /* UserService.swift */; };
-		B68C5DB226F207F200706D1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C5DB126F207F200706D1E /* User.swift */; };
+		B68C5DB026F206A100706D1E /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C5DAF26F206A100706D1E /* UserTarget.swift */; };
 		C2B27199A8ABAFD8F775F757 /* Pods_NotesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A6C7A7F982F0DFBB50057C /* Pods_NotesAppTests.framework */; };
 		CB32B6B7B707278BF833E33D /* Pods_NotesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43586A53C9E685691EA301B1 /* Pods_NotesApp.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +66,13 @@
 		45B9E3E8E28E41077FC77334 /* Pods-NotesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesApp.debug.xcconfig"; path = "Target Support Files/Pods-NotesApp/Pods-NotesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		82149A57333BF1DF8F32B558 /* Pods-NotesAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesAppTests.release.xcconfig"; path = "Target Support Files/Pods-NotesAppTests/Pods-NotesAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C0235C21AED8869EAB32C14 /* Pods_NotesApp_NotesAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotesApp_NotesAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62C408226F8A405006960ED /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		B62C408626F8A4E3006960ED /* NotesAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAPIProtocol.swift; sourceTree = "<group>"; };
+		B62C408826F8A4ED006960ED /* NotesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAPI.swift; sourceTree = "<group>"; };
+		B62C408A26F8A7D2006960ED /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		B62C408C26F8AA6E006960ED /* NoteTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTarget.swift; sourceTree = "<group>"; };
+		B62C408E26F8B071006960ED /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		B62C409026F8B083006960ED /* SignInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBuilder.swift; sourceTree = "<group>"; };
 		B631AD8026EA3E3E00A2F2A7 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B631AD8326EA3E3E00A2F2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B631AD8526EA3E3E00A2F2A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +89,7 @@
 		B631ADA826EA3E4100A2F2A7 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		B631ADAA26EA3E4100A2F2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B64ABEBA26EF64C7000FEA0F /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
-		B64ABEBE26EF9075000FEA0F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B64ABEBE26EF9075000FEA0F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		B64ABEC426F09BAB000FEA0F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B64ABEC626F0BE31000FEA0F /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		B64ABED926F0EE8E000FEA0F /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -86,10 +99,9 @@
 		B64ABEE326F0FF50000FEA0F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B64ABEE526F10100000FEA0F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B64ABEE726F10A1B000FEA0F /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
-		B660691826F32D3900E7A198 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		B660691826F32D3900E7A198 /* UserAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIProtocol.swift; sourceTree = "<group>"; };
 		B660691A26F372F200E7A198 /* UserAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccess.swift; sourceTree = "<group>"; };
-		B68C5DAF26F206A100706D1E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		B68C5DB126F207F200706D1E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B68C5DAF26F206A100706D1E /* UserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
 		E3E5434887CD783A8DC9AEE7 /* Pods-NotesApp-NotesAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesApp-NotesAppUITests.release.xcconfig"; path = "Target Support Files/Pods-NotesApp-NotesAppUITests/Pods-NotesApp-NotesAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F69F0CEA4DA74F8A6416F616 /* Pods-NotesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesAppTests.debug.xcconfig"; path = "Target Support Files/Pods-NotesAppTests/Pods-NotesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6A6C7A7F982F0DFBB50057C /* Pods_NotesAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotesAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +146,26 @@
 				82149A57333BF1DF8F32B558 /* Pods-NotesAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B62C408426F8A4A2006960ED /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B660691826F32D3900E7A198 /* UserAPIProtocol.swift */,
+				B62C408226F8A405006960ED /* UserAPI.swift */,
+				B68C5DAF26F206A100706D1E /* UserTarget.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B62C408526F8A4CB006960ED /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				B62C408626F8A4E3006960ED /* NotesAPIProtocol.swift */,
+				B62C408826F8A4ED006960ED /* NotesAPI.swift */,
+				B62C408C26F8AA6E006960ED /* NoteTarget.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 		B631AD7726EA3E3E00A2F2A7 = {
@@ -200,11 +232,10 @@
 		B64ABEBD26EF9062000FEA0F /* API */ = {
 			isa = PBXGroup;
 			children = (
-				B64ABEBE26EF9075000FEA0F /* APIManager.swift */,
+				B62C408526F8A4CB006960ED /* Notes */,
+				B62C408426F8A4A2006960ED /* User */,
+				B64ABEBE26EF9075000FEA0F /* API.swift */,
 				B64ABEBA26EF64C7000FEA0F /* RegisterModel.swift */,
-				B68C5DAF26F206A100706D1E /* UserService.swift */,
-				B660691826F32D3900E7A198 /* APIProtocol.swift */,
-				B660691A26F372F200E7A198 /* UserAccess.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -224,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				B631AD8726EA3E3E00A2F2A7 /* SignInViewController.swift */,
+				B62C408E26F8B071006960ED /* SignInViewModel.swift */,
+				B62C409026F8B083006960ED /* SignInBuilder.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -301,7 +334,8 @@
 		B64ABED726F0EDF9000FEA0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B68C5DB126F207F200706D1E /* User.swift */,
+				B660691A26F372F200E7A198 /* UserAccess.swift */,
+				B62C408A26F8A7D2006960ED /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,23 +610,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B64ABEBF26EF9075000FEA0F /* APIManager.swift in Sources */,
+				B62C409126F8B083006960ED /* SignInBuilder.swift in Sources */,
+				B64ABEBF26EF9075000FEA0F /* API.swift in Sources */,
 				B631AD8826EA3E3E00A2F2A7 /* SignInViewController.swift in Sources */,
 				B64ABEBB26EF64C7000FEA0F /* RegisterModel.swift in Sources */,
-				B68C5DB226F207F200706D1E /* User.swift in Sources */,
+				B62C408726F8A4E3006960ED /* NotesAPIProtocol.swift in Sources */,
 				B64ABEE226F0FE48000FEA0F /* ViewController.swift in Sources */,
+				B62C408B26F8A7D3006960ED /* Note.swift in Sources */,
 				B631AD8426EA3E3E00A2F2A7 /* AppDelegate.swift in Sources */,
 				B64ABEE626F10100000FEA0F /* ViewModel.swift in Sources */,
+				B62C408F26F8B071006960ED /* SignInViewModel.swift in Sources */,
 				B64ABEC726F0BE31000FEA0F /* NotesViewController.swift in Sources */,
 				B64ABEC526F09BAB000FEA0F /* SignUpViewController.swift in Sources */,
-				B660691926F32D3900E7A198 /* APIProtocol.swift in Sources */,
+				B660691926F32D3900E7A198 /* UserAPIProtocol.swift in Sources */,
 				B631AD8626EA3E3E00A2F2A7 /* SceneDelegate.swift in Sources */,
 				B64ABEE826F10A1B000FEA0F /* MainBuilder.swift in Sources */,
-				B68C5DB026F206A100706D1E /* UserService.swift in Sources */,
+				B68C5DB026F206A100706D1E /* UserTarget.swift in Sources */,
 				B660691B26F372F200E7A198 /* UserAccess.swift in Sources */,
 				B631AD8E26EA3E3E00A2F2A7 /* NotesApp.xcdatamodeld in Sources */,
+				B62C408926F8A4ED006960ED /* NotesAPI.swift in Sources */,
 				B64ABEDF26F0F1B1000FEA0F /* MainViewController.swift in Sources */,
+				B62C408D26F8AA6E006960ED /* NoteTarget.swift in Sources */,
 				B64ABEE426F0FF50000FEA0F /* MainViewModel.swift in Sources */,
+				B62C408326F8A405006960ED /* UserAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

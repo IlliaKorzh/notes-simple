@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ViewController/*<VM: ViewModel>*/: UIViewController {
+class ViewController<VM: ViewModel>: UIViewController {
 
-    private var viewModel: ViewModel!
+    var viewModel: VM!
 }
 
-extension ViewController /*where VM.ViewController == ViewController*/ {
+extension ViewController where VM.ViewController: ViewController {
     
-    func bind(viewModel: ViewModel) {
+    func bind(viewModel: VM) {
         self.viewModel = viewModel
         viewModel.bind(viewController: self)
     }
