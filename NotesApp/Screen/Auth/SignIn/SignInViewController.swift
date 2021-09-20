@@ -7,33 +7,23 @@
 
 import UIKit
 
-
-
 class SignInViewController: ViewController<SignInViewModel> {
     
     //MARK: - Outlets
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
     
-    
-//    var signInViewModel: SignInViewModel {
-//        viewModel as! SignInViewModel
-//    }
-    
-  //MARK: - Actions
- //check how works request
-    @IBAction func didTapContinue(_sender: Any){
+    //MARK: - Actions
+    @IBAction func signInTouchUpInside(_ sender: Any) {
         
-        let userEmail = email.text 
-        let userPassword = password.text
+        guard
+            let email = email.text,
+            let password = password.text,
+            email.isEmpty == false,
+            password.isEmpty == false
+        else { return}
         
+        viewModel.signIn(email: email, password: password)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-    }
-
-    
 }
-

@@ -41,17 +41,17 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Add-uy-SUn">
-                                <rect key="frame" x="16" y="281.5" width="382" height="150"/>
+                                <rect key="frame" x="16" y="301" width="382" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7L-tY-pBD">
                                         <rect key="frame" x="48" y="8" width="286.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartInsertDeleteType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPV-pA-r2y">
                                         <rect key="frame" x="48" y="50" width="286.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-mA-SXE">
                                         <rect key="frame" x="48" y="92" width="286.5" height="50"/>
@@ -59,7 +59,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1oO-7D-VUl"/>
                                         </constraints>
-                                        <state key="normal" title="Continue">
+                                        <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -68,7 +68,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="didTapContinueWith_sender:" destination="dwZ-Cl-SI2" eventType="touchUpInside" id="7mo-di-cLY"/>
+                                            <action selector="signInTouchUpInside:" destination="dwZ-Cl-SI2" eventType="touchUpInside" id="vRR-6x-1dM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -95,9 +95,15 @@
                     <connections>
                         <outlet property="email" destination="y7L-tY-pBD" id="hXj-55-Gj1"/>
                         <outlet property="password" destination="fPV-pA-r2y" id="hdN-OD-QMw"/>
+                        <outlet property="signInButton" destination="Sxg-mA-SXE" id="HaJ-Tw-WfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCo-oa-7gu" sceneMemberID="firstResponder"/>
+                <customObject id="rUa-7F-mpf" customClass="SignInBuilder" customModule="NotesApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="dwZ-Cl-SI2" id="TgC-qg-4pT"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="981.15942028985512" y="75.669642857142847"/>
         </scene>
@@ -114,7 +120,7 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-ia-DdR">
-                                <rect key="frame" x="16" y="281.5" width="382" height="150"/>
+                                <rect key="frame" x="16" y="301" width="382" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zi-Lo-B56">
                                         <rect key="frame" x="16" y="8" width="350" height="34"/>
@@ -132,7 +138,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="CLt-uE-hH3"/>
                                         </constraints>
-                                        <state key="normal" title="Register">
+                                        <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -164,8 +170,8 @@
             <objects>
                 <navigationController id="FVZ-oL-YzW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8so-9l-Nnk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="8so-9l-Nnk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

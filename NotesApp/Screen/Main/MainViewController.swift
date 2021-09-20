@@ -9,7 +9,7 @@ import UIKit
 
 extension MainViewController {
     
-    enum Flow {
+    enum Flow: Equatable {
         case auth, notes
         
         func map<T>(_ transform: (Flow) -> T) -> T {
@@ -34,23 +34,28 @@ class MainViewController: ViewController<MainViewModel> {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        UIView.animate(withDuration: 0.3) {
-            self.notes.map { viewController in
-                viewController.view.layer.opacity = self.flow.map { flow in
-                    switch flow {
-                    case .auth: return 0
-                    case .notes: return 1
-                    }
-                }
+        
+        switch flow {
+        case .auth where auth?.parent != self:
+            self.children.forEach { viewController in
+                viewController.willMove(toParent: nil)
+                viewController.removeFromParent()
+                viewController.view.removeFromSuperview()
+                viewController.didMove(toParent: nil)
             }
-            self.auth.map { viewController in
-                viewController.view.layer.opacity = self.flow.map { flow in
-                    switch flow {
-                    case .notes: return 0
-                    case .auth: return 1
-                    }
-                }
+            performSegue(withIdentifier: "com.segue.auth", sender: self)
+            
+        case .notes where notes?.parent != self:
+            self.children.forEach { viewController in
+                viewController.willMove(toParent: nil)
+                viewController.removeFromParent()
+                viewController.view.removeFromSuperview()
+                viewController.didMove(toParent: nil)
             }
+            performSegue(withIdentifier: "com.segue.notes", sender: self)
+        
+        default:
+            break
         }
     }
     

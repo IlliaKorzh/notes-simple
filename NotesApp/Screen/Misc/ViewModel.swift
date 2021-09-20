@@ -8,8 +8,6 @@
 import UIKit
 
 protocol ViewModel {
-    
     associatedtype ViewController: UIViewController
-    
     func bind(viewController: ViewController)
 }

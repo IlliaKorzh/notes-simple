@@ -8,14 +8,16 @@
 import UIKit
 
 class ViewController<VM: ViewModel>: UIViewController {
-
     var viewModel: VM!
 }
 
 extension ViewController where VM.ViewController: ViewController {
-    
     func bind(viewModel: VM) {
         self.viewModel = viewModel
-        viewModel.bind(viewController: self)
+        guard let viewController = self as? VM.ViewController else {
+            assertionFailure("Expected \(self) to type of \(VM.ViewController.self)")
+            return
+        }
+        viewModel.bind(viewController: viewController)
     }
 }

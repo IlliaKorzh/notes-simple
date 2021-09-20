@@ -23,15 +23,15 @@ extension Target.Note: TargetType, AccessTokenAuthorizable {
     }
     
     var baseURL: URL {
-        Target.base
+        Target.base.appendingPathComponent("notes")
     }
     
     var path: String {
         switch self {
         case .list, .create:
-            return "notes"
+            return ""
         case let .single(id):
-            return "notes/\(id)"
+            return "/\(id)"
         }
     }
     

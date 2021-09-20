@@ -7,13 +7,8 @@
 
 import Foundation
 
-
 protocol NotesAPIProtocol {
-    
     func list(completion: @escaping (Result<[Note], Error>) -> Void)
-    
     func single(id: String, completion: @escaping (Result<Note, Error>) -> Void)
-    
     func create(title: String, subtitle: String, completion: @escaping (Result<Note, Error>) -> Void)
-    
 }
