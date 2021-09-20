@@ -8,13 +8,11 @@
 import Foundation
 import Moya
 
-
 enum Target {
     static var base: URL {
-        URL(string: "https://notes-1ed6c.web.app/api/users")!
+        URL(string: "https://notes-1ed6c.web.app/api")!
     }
 }
-
 
 class API<MoyaTarget: TargetType> {
     

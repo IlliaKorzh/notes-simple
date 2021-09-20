@@ -18,7 +18,7 @@ extension Target {
 extension Target.User: TargetType {
     
     var baseURL: URL {
-        Target.base
+        Target.base.appendingPathComponent("users")
     }
     
     var path: String {

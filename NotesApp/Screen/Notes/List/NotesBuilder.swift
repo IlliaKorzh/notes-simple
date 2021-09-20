@@ -1,4 +1,5 @@
 import UIKit
+import Moya
 
 class NotesBuilder: NSObject {
     
@@ -12,7 +13,13 @@ class NotesBuilder: NSObject {
         
         viewController.bind(
             viewModel: NotesViewModel(
-                api: API(provider: .init())
+                api: API(
+                    provider: MoyaProvider(
+                        plugins: [
+                            AccessTokenPlugin(tokenClosure: { target in TokenHolder.shared.token ?? "" })
+                        ]
+                    )
+                )
             )
         )
     }

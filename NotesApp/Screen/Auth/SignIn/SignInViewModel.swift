@@ -37,7 +37,7 @@ class SignInViewModel: ViewModel {
             self?.viewController.password.text = nil
             
             switch result {
-            case let .success(user):    
+            case let .success(user):
                 TokenHolder.shared.token = user.jwt
                 
             case let .failure(error):

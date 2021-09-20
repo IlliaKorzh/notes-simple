@@ -14,7 +14,7 @@
                 <viewControllerPlaceholder storyboardName="Notes" id="fjk-Bf-Wfp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0a-vW-mzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="481"/>
+            <point key="canvasLocation" x="1474" y="532"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="jpr-KY-iyx">
@@ -23,36 +23,12 @@
                     <view key="view" contentMode="scaleToFill" id="G5i-iI-zeV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrK-64-8SL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <connections>
-                                    <segue destination="fjk-Bf-Wfp" kind="embed" identifier="com.segue.notes" id="SaT-76-QB1"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-xN-bQi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <connections>
-                                    <segue destination="LQR-ut-Lni" kind="embed" identifier="com.segue.auth" id="5h0-jD-xGP"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cKt-tO-Wb1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="B5Y-xN-bQi" firstAttribute="leading" secondItem="G5i-iI-zeV" secondAttribute="leading" id="27W-U7-6Ou"/>
-                            <constraint firstAttribute="bottom" secondItem="B5Y-xN-bQi" secondAttribute="bottom" id="Bph-KW-9em"/>
-                            <constraint firstItem="MrK-64-8SL" firstAttribute="top" secondItem="G5i-iI-zeV" secondAttribute="top" id="CR3-f3-nRQ"/>
-                            <constraint firstItem="B5Y-xN-bQi" firstAttribute="top" secondItem="G5i-iI-zeV" secondAttribute="top" id="FJA-iL-Hse"/>
-                            <constraint firstItem="MrK-64-8SL" firstAttribute="trailing" secondItem="G5i-iI-zeV" secondAttribute="trailing" id="ODS-kT-qcl"/>
-                            <constraint firstItem="B5Y-xN-bQi" firstAttribute="trailing" secondItem="G5i-iI-zeV" secondAttribute="trailing" id="h1W-M7-DVP"/>
-                            <constraint firstItem="MrK-64-8SL" firstAttribute="leading" secondItem="G5i-iI-zeV" secondAttribute="leading" id="oqK-pk-GoA"/>
-                            <constraint firstAttribute="bottom" secondItem="MrK-64-8SL" secondAttribute="bottom" id="pE6-z6-K4C"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="authContainerView" destination="B5Y-xN-bQi" id="KJs-ub-CFk"/>
-                        <outlet property="notesContainerView" destination="MrK-64-8SL" id="0bx-mA-LOU"/>
+                        <segue destination="fjk-Bf-Wfp" kind="custom" identifier="com.segue.notes" customClass="MainSegue" customModule="NotesApp" customModuleProvider="target" id="RsJ-AL-lfn"/>
+                        <segue destination="LQR-ut-Lni" kind="custom" identifier="com.segue.auth" customClass="MainSegue" customModule="NotesApp" customModuleProvider="target" id="N7Y-nH-wPz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqR-V9-nU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,7 +46,7 @@
                 <viewControllerPlaceholder storyboardName="Auth" id="LQR-ut-Lni" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuz-ec-vDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1328" y="300"/>
+            <point key="canvasLocation" x="1469" y="277"/>
         </scene>
     </scenes>
     <resources>
