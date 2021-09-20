@@ -12,20 +12,12 @@ class MainViewModel: ViewModel {
     weak var viewController: MainViewController!
     
     func bind(viewController: MainViewController) {
-//        guard let viewController = viewController as? MainViewController
-//        else {
-//            fatalError(
-//                """
-//                    \(self) expected ViewController of type MainViewController,
-//                    got \(type(of: viewController))
-//                """)
-//        }
         self.viewController = viewController
     }
     
-//    init() {
+    init() {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
 //            self.viewController.flow = .notes
 //        }
-//    }
+    }
 }

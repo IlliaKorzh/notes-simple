@@ -24,7 +24,6 @@
 		B631AD9326EA3E4000A2F2A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B631AD9126EA3E4000A2F2A7 /* LaunchScreen.storyboard */; };
 		B631AD9E26EA3E4100A2F2A7 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AD9D26EA3E4100A2F2A7 /* NotesAppTests.swift */; };
 		B631ADA926EA3E4100A2F2A7 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631ADA826EA3E4100A2F2A7 /* NotesAppUITests.swift */; };
-		B64ABEBB26EF64C7000FEA0F /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEBA26EF64C7000FEA0F /* RegisterModel.swift */; };
 		B64ABEBF26EF9075000FEA0F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEBE26EF9075000FEA0F /* API.swift */; };
 		B64ABEC526F09BAB000FEA0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEC426F09BAB000FEA0F /* SignUpViewController.swift */; };
 		B64ABEC726F0BE31000FEA0F /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64ABEC626F0BE31000FEA0F /* NotesViewController.swift */; };
@@ -88,7 +87,6 @@
 		B631ADA426EA3E4100A2F2A7 /* NotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B631ADA826EA3E4100A2F2A7 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		B631ADAA26EA3E4100A2F2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B64ABEBA26EF64C7000FEA0F /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		B64ABEBE26EF9075000FEA0F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		B64ABEC426F09BAB000FEA0F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B64ABEC626F0BE31000FEA0F /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				B64ABED726F0EDF9000FEA0F /* Model */,
-				B64ABED526F0EDD8000FEA0F /* Database */,
 				B64ABEBD26EF9062000FEA0F /* API */,
 			);
 			path = Service;
@@ -235,7 +232,6 @@
 				B62C408526F8A4CB006960ED /* Notes */,
 				B62C408426F8A4A2006960ED /* User */,
 				B64ABEBE26EF9075000FEA0F /* API.swift */,
-				B64ABEBA26EF64C7000FEA0F /* RegisterModel.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -324,13 +320,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B64ABED526F0EDD8000FEA0F /* Database */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		B64ABED726F0EDF9000FEA0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,10 +367,11 @@
 			buildConfigurationList = B631ADAD26EA3E4100A2F2A7 /* Build configuration list for PBXNativeTarget "NotesApp" */;
 			buildPhases = (
 				1E704287D20118A6ECA7C162 /* [CP] Check Pods Manifest.lock */,
+				C2677B8826F8BB17005D30BF /* [CP] Copy Pods Frameworks */,
 				B631AD7C26EA3E3E00A2F2A7 /* Sources */,
 				B631AD7D26EA3E3E00A2F2A7 /* Frameworks */,
 				B631AD7E26EA3E3E00A2F2A7 /* Resources */,
-				8164C6DD13345E3EDEC1E612 /* [CP] Embed Pods Frameworks */,
+				33A471B4163CD47F209FA8CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,7 +409,7 @@
 				B631ADA026EA3E4100A2F2A7 /* Sources */,
 				B631ADA126EA3E4100A2F2A7 /* Frameworks */,
 				B631ADA226EA3E4100A2F2A7 /* Resources */,
-				36A155C0264D0024E27CF9F8 /* [CP] Embed Pods Frameworks */,
+				F8C825580F02D75FBCF93543 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -525,21 +515,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		36A155C0264D0024E27CF9F8 /* [CP] Embed Pods Frameworks */ = {
+		33A471B4163CD47F209FA8CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NotesApp-NotesAppUITests/Pods-NotesApp-NotesAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NotesApp/Pods-NotesApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NotesApp-NotesAppUITests/Pods-NotesApp-NotesAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NotesApp/Pods-NotesApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotesApp-NotesAppUITests/Pods-NotesApp-NotesAppUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotesApp/Pods-NotesApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3B349188A981664A82464918 /* [CP] Check Pods Manifest.lock */ = {
@@ -586,21 +576,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8164C6DD13345E3EDEC1E612 /* [CP] Embed Pods Frameworks */ = {
+		C2677B8826F8BB17005D30BF /* [CP] Copy Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NotesApp/Pods-NotesApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NotesApp/Pods-NotesApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotesApp/Pods-NotesApp-frameworks.sh\"\n";
+			shellScript = "#\"${PODS_ROOT}/Target Support Files/Pods-NotesApp/Pods-NotesApp-frameworks.sh\"\n";
+		};
+		F8C825580F02D75FBCF93543 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotesApp-NotesAppUITests/Pods-NotesApp-NotesAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NotesApp-NotesAppUITests/Pods-NotesApp-NotesAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NotesApp-NotesAppUITests/Pods-NotesApp-NotesAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -613,7 +621,6 @@
 				B62C409126F8B083006960ED /* SignInBuilder.swift in Sources */,
 				B64ABEBF26EF9075000FEA0F /* API.swift in Sources */,
 				B631AD8826EA3E3E00A2F2A7 /* SignInViewController.swift in Sources */,
-				B64ABEBB26EF64C7000FEA0F /* RegisterModel.swift in Sources */,
 				B62C408726F8A4E3006960ED /* NotesAPIProtocol.swift in Sources */,
 				B64ABEE226F0FE48000FEA0F /* ViewController.swift in Sources */,
 				B62C408B26F8A7D3006960ED /* Note.swift in Sources */,

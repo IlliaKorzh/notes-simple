@@ -4,34 +4,48 @@
 //
 //  Created by Ilya Korzhynskiy on 20.09.2021.
 //
-
+import Foundation
 import UIKit
 
 class SignInViewModel: ViewModel {
     
-    let api: UserAPIProtocol
-    
     weak var viewController: SignInViewController!
+    private let api: UserAPIProtocol
     
     init(api: UserAPIProtocol) {
         self.api = api
     }
     
-    func bind(viewController: UIViewController) {
-        guard let viewController = viewController as? SignInViewController
-        else {
-            fatalError(
-                """
-                    \(self) expected ViewController of type SignInViewController,
-                    got \(type(of: viewController))
-                """)
-        }
+    func bind(viewController: SignInViewController) {
         self.viewController = viewController
     }
     
-//    init() {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-//            self.viewController.flow = .notes
-//        }
-//    }
+    func signIn(email: String, password: String) {
+        
+        let controls = [
+            viewController.email,
+            viewController.password,
+            viewController.signInButton
+        ]
+        
+        controls.forEach { $0?.isEnabled = false }
+        
+        api.signIn(email: email, password: password) { [weak self] result in
+            
+            controls.forEach { $0?.isEnabled = true }
+            
+            switch result {
+            case .success:
+                break
+                
+            case let .failure(error):
+                let alert = UIAlertController(
+                    title: "Warning",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self?.viewController.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
 }

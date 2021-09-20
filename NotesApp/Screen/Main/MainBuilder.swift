@@ -8,13 +8,15 @@
 import UIKit
 
 class MainBuilder: NSObject {
+    
     @IBOutlet weak var viewController: UIViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        guard let mainViewController = viewController as? MainViewController else {
-            fatalError()
-        }
+        
+        guard let mainViewController = viewController as? MainViewController
+        else { fatalError() }
+        
         mainViewController.bind(viewModel: MainViewModel())
     }
 }

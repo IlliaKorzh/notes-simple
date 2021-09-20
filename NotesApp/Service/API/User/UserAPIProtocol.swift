@@ -9,10 +9,6 @@ import Foundation
 import Moya
 
 protocol UserAPIProtocol {
-
-    
-    func signUp(name: String?, email: String, password: String, completion: @escaping (Result<UserAccess, Error>) -> Void)
-    
     func signIn(email: String, password: String, completion: @escaping (Result<UserAccess, Error>) -> Void)
-    
+    func signUp(name: String, email: String, password: String, completion: @escaping (Result<UserAccess, Error>) -> Void)
 }
