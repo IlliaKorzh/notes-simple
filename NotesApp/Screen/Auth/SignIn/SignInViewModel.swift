@@ -34,9 +34,11 @@ class SignInViewModel: ViewModel {
             
             controls.forEach { $0?.isEnabled = true }
             
+            self?.viewController.password.text = nil
+            
             switch result {
-            case .success:
-                break
+            case let .success(user):    
+                TokenHolder.shared.token = user.jwt
                 
             case let .failure(error):
                 let alert = UIAlertController(

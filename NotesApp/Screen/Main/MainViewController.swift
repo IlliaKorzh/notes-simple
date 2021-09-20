@@ -9,7 +9,7 @@ import UIKit
 
 extension MainViewController {
     
-    enum Flow {
+    enum Flow: Equatable {
         case auth, notes
         
         func map<T>(_ transform: (Flow) -> T) -> T {
@@ -30,28 +30,40 @@ class MainViewController: ViewController<MainViewModel> {
     private var auth: UIViewController?
     private var notes: UIViewController?
     
+    @IBOutlet private weak var notesContainerView: UIView!
+    @IBOutlet private weak var authContainerView: UIView!
+    
     // MARK: - LifeCycle
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        UIView.animate(withDuration: 0.3) {
-            self.notes.map { viewController in
-                viewController.view.layer.opacity = self.flow.map { flow in
+        
+        UIView.animate(
+            withDuration: 0.3,
+            animations: {
+                self.notesContainerView.layer.opacity = self.flow.map { flow in
                     switch flow {
                     case .auth: return 0
                     case .notes: return 1
                     }
                 }
-            }
-            self.auth.map { viewController in
-                viewController.view.layer.opacity = self.flow.map { flow in
+                
+                self.authContainerView.layer.opacity = self.flow.map { flow in
                     switch flow {
                     case .notes: return 0
                     case .auth: return 1
                     }
                 }
-            }
-        }
+            },
+            completion: { _ in
+                self.notesContainerView.isHidden = self.flow.map { flow in
+                    flow == .auth
+                }
+                
+                self.authContainerView.isHidden = self.flow.map { flow in
+                    flow == .notes
+                }
+            })
     }
     
     // MARK: - Navigation

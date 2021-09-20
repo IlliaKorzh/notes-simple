@@ -6,18 +6,22 @@
 //
 
 import UIKit
+import Combine
 
 class MainViewModel: ViewModel {
+    
+    private var bag: AnyCancellable?
     
     weak var viewController: MainViewController!
     
     func bind(viewController: MainViewController) {
         self.viewController = viewController
-    }
-    
-    init() {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-//            self.viewController.flow = .notes
-//        }
+        
+        bag = TokenHolder.shared.$token
+            .map { token in token?.isEmpty != false }
+            .map { isEmpty -> MainViewController.Flow in isEmpty ? .auth : .notes }
+            .removeDuplicates()
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.flow, on: viewController)
     }
 }

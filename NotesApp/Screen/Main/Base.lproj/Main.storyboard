@@ -14,7 +14,7 @@
                 <viewControllerPlaceholder storyboardName="Notes" id="fjk-Bf-Wfp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0a-vW-mzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="265"/>
+            <point key="canvasLocation" x="1333" y="481"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="jpr-KY-iyx">
@@ -50,6 +50,10 @@
                             <constraint firstAttribute="bottom" secondItem="MrK-64-8SL" secondAttribute="bottom" id="pE6-z6-K4C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authContainerView" destination="B5Y-xN-bQi" id="KJs-ub-CFk"/>
+                        <outlet property="notesContainerView" destination="MrK-64-8SL" id="0bx-mA-LOU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqR-V9-nU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="2uJ-Iy-hIP" customClass="MainBuilder" customModule="NotesApp" customModuleProvider="target">
@@ -66,7 +70,7 @@
                 <viewControllerPlaceholder storyboardName="Auth" id="LQR-ut-Lni" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuz-ec-vDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="411"/>
+            <point key="canvasLocation" x="1328" y="300"/>
         </scene>
     </scenes>
     <resources>
