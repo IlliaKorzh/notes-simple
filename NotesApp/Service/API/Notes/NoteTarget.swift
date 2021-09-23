@@ -40,7 +40,7 @@ extension Target.Note: TargetType, AccessTokenAuthorizable {
         case .list, .single:
             return .get
         case .create:
-            return .post
+            return .put
         }
     }
     

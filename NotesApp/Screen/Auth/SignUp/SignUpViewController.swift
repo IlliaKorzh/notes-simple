@@ -7,8 +7,13 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: ViewController<SignUpViewModel> {
 
+    // MARK: - Outlets
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +21,18 @@ class SignUpViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    
+    // MARK: - Action
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func signUpTouchUpInside(_ sender: Any) {
+        
+        guard
+            let email = email.text,
+            let password = password.text,
+            email.isEmpty == false,
+            password.isEmpty == false
+        else { return}
+        
+        viewModel.signUp(email: email, password: password)
     }
-    */
-
 }

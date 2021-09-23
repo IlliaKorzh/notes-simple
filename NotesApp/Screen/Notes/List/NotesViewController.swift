@@ -10,6 +10,9 @@ import UIKit
 class NotesViewController: ViewController<NotesViewModel> {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var noteById: Note?
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -47,5 +50,23 @@ extension NotesViewController: UITableViewDataSource {
         configuration.secondaryText = viewModel.notes[indexPath.item].subtitle
         cell.contentConfiguration = configuration
         return cell
+    }
+}
+
+extension NotesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedId = viewModel.notes[indexPath.row].id
+        viewModel.getNote(id: selectedId)
+        
+    }
+}
+
+extension NotesViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! NoteDetailViewController
+        if segue .identifier == "com.update.note.segue" {
+            vc.noteDetail = viewModel.notes[tableView.indexPathForSelectedRow!.row]
+            
+        }
     }
 }
