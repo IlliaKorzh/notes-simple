@@ -12,7 +12,9 @@ class NotesViewModel: ViewModel {
     private let api: NotesAPIProtocol
     private weak var viewController: NotesViewController!
     private(set) var notes: [Note] = []
+    
     var noteDetail: Note?
+    let database = NotesHandler()
 
     init(api: NotesAPIProtocol) {
         self.api = api
@@ -26,14 +28,21 @@ class NotesViewModel: ViewModel {
         TokenHolder.shared.token = nil
     }
     
+    func fetch() -> [NoteCoreData] {
+        let result = database.fetch(NoteCoreData.self)
+        return result
+    }
+    
     func reloadData() {
         api.list { [weak self] notes in
             self?.viewController.tableView.refreshControl?.endRefreshing()
             switch notes {
             case let .success(notes):
+//                notes.forEach { $0.store() }
+//                var result = self?.database.fetch(NoteCoreData.self)
+//                result = self?.coreNotes
                 self?.notes = notes
                 self?.viewController.tableView.reloadData()
-                
             case let .failure(error):
                 let alert = UIAlertController(
                     title: "Warning",

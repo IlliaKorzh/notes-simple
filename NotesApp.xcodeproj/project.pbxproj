@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4C62BF6CD38326F088226384 /* Pods_NotesApp_NotesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0235C21AED8869EAB32C14 /* Pods_NotesApp_NotesAppUITests.framework */; };
 		993AE2188C9E33321E4B5F64 /* Pods_NotesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43586A53C9E685691EA301B1 /* Pods_NotesApp.framework */; };
+		B60869C92702FC930027250B /* NotesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60869C82702FC930027250B /* NotesHandler.swift */; };
+		B60869CC270307AE0027250B /* NoteCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60869CA270307AE0027250B /* NoteCoreData+CoreDataClass.swift */; };
+		B60869CD270307AE0027250B /* NoteCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60869CB270307AE0027250B /* NoteCoreData+CoreDataProperties.swift */; };
 		B62C408326F8A405006960ED /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408226F8A405006960ED /* UserAPI.swift */; };
 		B62C408726F8A4E3006960ED /* NotesAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408626F8A4E3006960ED /* NotesAPIProtocol.swift */; };
 		B62C408926F8A4ED006960ED /* NotesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C408826F8A4ED006960ED /* NotesAPI.swift */; };
@@ -74,6 +77,9 @@
 		45B9E3E8E28E41077FC77334 /* Pods-NotesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesApp.debug.xcconfig"; path = "Target Support Files/Pods-NotesApp/Pods-NotesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		82149A57333BF1DF8F32B558 /* Pods-NotesAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesAppTests.release.xcconfig"; path = "Target Support Files/Pods-NotesAppTests/Pods-NotesAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C0235C21AED8869EAB32C14 /* Pods_NotesApp_NotesAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotesApp_NotesAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60869C82702FC930027250B /* NotesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHandler.swift; sourceTree = "<group>"; };
+		B60869CA270307AE0027250B /* NoteCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NoteCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B60869CB270307AE0027250B /* NoteCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NoteCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B62C408226F8A405006960ED /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		B62C408626F8A4E3006960ED /* NotesAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAPIProtocol.swift; sourceTree = "<group>"; };
 		B62C408826F8A4ED006960ED /* NotesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAPI.swift; sourceTree = "<group>"; };
@@ -349,8 +355,11 @@
 		B64ABED726F0EDF9000FEA0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B60869CA270307AE0027250B /* NoteCoreData+CoreDataClass.swift */,
+				B60869CB270307AE0027250B /* NoteCoreData+CoreDataProperties.swift */,
 				B660691A26F372F200E7A198 /* UserAccess.swift */,
 				B62C408A26F8A7D2006960ED /* Note.swift */,
+				B60869C82702FC930027250B /* NotesHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -657,6 +666,7 @@
 				B64ABEE626F10100000FEA0F /* ViewModel.swift in Sources */,
 				B62C408F26F8B071006960ED /* SignInViewModel.swift in Sources */,
 				B64ABEC726F0BE31000FEA0F /* NotesViewController.swift in Sources */,
+				B60869CC270307AE0027250B /* NoteCoreData+CoreDataClass.swift in Sources */,
 				B64ABEC526F09BAB000FEA0F /* SignUpViewController.swift in Sources */,
 				C2677B8A26F8D415005D30BF /* TokenHolder.swift in Sources */,
 				B660691926F32D3900E7A198 /* UserAPIProtocol.swift in Sources */,
@@ -665,6 +675,7 @@
 				B631AD8626EA3E3E00A2F2A7 /* SceneDelegate.swift in Sources */,
 				B64ABEE826F10A1B000FEA0F /* MainBuilder.swift in Sources */,
 				C2677B9026F8DF52005D30BF /* MainSegue.swift in Sources */,
+				B60869C92702FC930027250B /* NotesHandler.swift in Sources */,
 				B68C5DB026F206A100706D1E /* UserTarget.swift in Sources */,
 				B660691B26F372F200E7A198 /* UserAccess.swift in Sources */,
 				B640D6EB26FA29D4006FA9C5 /* NoteDetailBuilder.swift in Sources */,
@@ -675,6 +686,7 @@
 				B62C408D26F8AA6E006960ED /* NoteTarget.swift in Sources */,
 				B64ABEE426F0FF50000FEA0F /* MainViewModel.swift in Sources */,
 				B62C408326F8A405006960ED /* UserAPI.swift in Sources */,
+				B60869CD270307AE0027250B /* NoteCoreData+CoreDataProperties.swift in Sources */,
 				B640D6E426FA07DB006FA9C5 /* SignUpBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

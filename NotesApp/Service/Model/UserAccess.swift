@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct UserAccess: Codable {
   let jwt: String?
   let id: String
