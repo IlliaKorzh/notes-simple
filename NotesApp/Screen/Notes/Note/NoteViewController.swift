@@ -9,22 +9,30 @@ import UIKit
 
 class NoteViewController: ViewController<NoteViewModel> {
     
-    
-//MARK: - Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var subtitleText: UITextView!
+    @IBOutlet weak var saveButtonItem: UIBarButtonItem!
     
-    
-    
-    @IBAction func saveClick(_ sender: Any) {
-//        viewModel.addNote(title: titleText.text ?? "no data was saved", subtitle: subtitleText.text ?? "no data was saved")
-    }
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        titleText.text = noteDetail?.title
-//        subtitleText.text = noteDetail?.subtitle
+        titleText.text = viewModel.title
+        subtitleText.text = viewModel.subtitle
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        viewModel.title = titleText.text
+        viewModel.subtitle = subtitleText.text
+//        saveButtonItem.isEnabled = viewModel.save != nil
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func saveClick(_ sender: Any) {
+        viewModel.save?()
+    }
 }

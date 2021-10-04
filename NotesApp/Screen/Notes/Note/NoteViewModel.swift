@@ -9,8 +9,8 @@ import Foundation
 
 class NoteViewModel: ViewModel {
     
-    var title: String = ""
-    var subtitle: String = ""
+    var title: String?
+    var subtitle: String?
     var save: (() -> Void)?
     
     let api: NotesAPIProtocol

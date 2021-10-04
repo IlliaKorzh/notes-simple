@@ -45,7 +45,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="js3-HN-ADh" kind="show" identifier="com.update.note.segue" id="ozm-Gu-fCc"/>
+                                            <segue destination="63M-4i-QcF" kind="show" identifier="com.update.note.segue" customClass="EditNoteSegue" customModule="NotesApp" customModuleProvider="target" id="FnD-ae-X99"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -72,7 +72,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PyS-29-NWx">
                             <connections>
-                                <segue destination="js3-HN-ADh" kind="show" identifier="Note" id="JI4-NW-uyx"/>
+                                <segue destination="js3-HN-ADh" kind="show" identifier="com.create.note.segue" id="JI4-NW-uyx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -130,18 +130,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="saveButtonItem" destination="8XM-w3-FUq" id="aBz-lP-OAk"/>
                         <outlet property="subtitleText" destination="csp-fe-h83" id="ihf-zp-mXz"/>
                         <outlet property="titleText" destination="vg0-X5-dhf" id="dJN-4q-ace"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkP-RN-xo3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="hlv-kf-epl" customClass="EditNoteBuilder" customModule="NotesApp" customModuleProvider="target">
+                <customObject id="hlv-kf-epl" customClass="NewNoteBuilder" customModule="NotesApp" customModuleProvider="target">
                     <connections>
-                        <outlet property="viewController" destination="js3-HN-ADh" id="bqn-Z1-Hue"/>
+                        <outlet property="viewController" destination="js3-HN-ADh" id="arh-ay-XNC"/>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2326.0869565217395" y="782.8125"/>
+            <point key="canvasLocation" x="2325" y="410"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RBs-eb-SmU">
@@ -170,12 +171,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvq-6k-3o2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sXY-hI-J1w">
-                                <rect key="frame" x="0.0" y="86" width="414" height="776"/>
+                                <rect key="frame" x="0.0" y="182" width="414" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -207,18 +208,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVu-R4-xOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="0vw-tS-0Uo" customClass="NewNoteBuilder">
-                    <connections>
-                        <outlet property="viewController" destination="63M-4i-QcF" id="EDv-kt-gyz"/>
-                    </connections>
-                </customObject>
             </objects>
-            <point key="canvasLocation" x="2326" y="1464"/>
+            <point key="canvasLocation" x="2325" y="1132"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ozm-Gu-fCc"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGreenColor"/>
     <resources>
         <systemColor name="labelColor">

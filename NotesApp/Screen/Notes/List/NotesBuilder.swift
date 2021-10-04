@@ -19,7 +19,8 @@ class NotesBuilder: NSObject {
                             AccessTokenPlugin(tokenClosure: { target in TokenHolder.shared.token ?? "" })
                         ]
                     )
-                )
+                ),
+                dataBase: .init(core: DataBase.sharedCore)
             )
         )
     }
