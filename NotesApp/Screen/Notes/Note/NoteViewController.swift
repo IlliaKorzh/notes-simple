@@ -7,9 +7,9 @@
 
 import UIKit
 
-class NoteDetailViewController: ViewController<NoteDetailViewModel> {
+class NoteViewController: ViewController<NoteViewModel> {
     
-    var noteDetail: Note?
+    
 //MARK: - Outlets
     
     @IBOutlet weak var titleText: UITextField!
@@ -18,13 +18,13 @@ class NoteDetailViewController: ViewController<NoteDetailViewModel> {
     
     
     @IBAction func saveClick(_ sender: Any) {
-        viewModel.addNote(title: titleText.text ?? "no data was saved", subtitle: subtitleText.text ?? "no data was saved")
+//        viewModel.addNote(title: titleText.text ?? "no data was saved", subtitle: subtitleText.text ?? "no data was saved")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleText.text = noteDetail?.title
-        subtitleText.text = noteDetail?.subtitle
+//        titleText.text = noteDetail?.title
+//        subtitleText.text = noteDetail?.subtitle
     }
     
 }

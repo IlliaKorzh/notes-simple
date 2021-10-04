@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1434.7826086956522" y="782.8125"/>
         </scene>
-        <!--Note Detail View Controller-->
+        <!--Note View Controller-->
         <scene sceneID="ABa-zz-eLO">
             <objects>
-                <viewController storyboardIdentifier="NoteDetailViewController" id="js3-HN-ADh" customClass="NoteDetailViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteDetailViewController" id="js3-HN-ADh" customClass="NoteViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CgC-fs-mbW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkP-RN-xo3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="hlv-kf-epl" customClass="NoteDetailBuilder" customModule="NotesApp" customModuleProvider="target">
+                <customObject id="hlv-kf-epl" customClass="EditNoteBuilder" customModule="NotesApp" customModuleProvider="target">
                     <connections>
                         <outlet property="viewController" destination="js3-HN-ADh" id="bqn-Z1-Hue"/>
                     </connections>
@@ -160,6 +160,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVz-T6-NBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524.63768115942037" y="782.8125"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="DtT-js-LUM">
+            <objects>
+                <viewController storyboardIdentifier="NewNoteViewController" id="63M-4i-QcF" customClass="NoteViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IBd-ih-v2r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvq-6k-3o2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sXY-hI-J1w">
+                                <rect key="frame" x="0.0" y="86" width="414" height="776"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H43-GH-b5V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H43-GH-b5V" firstAttribute="trailing" secondItem="sXY-hI-J1w" secondAttribute="trailing" id="9Qx-Kr-1zb"/>
+                            <constraint firstItem="sXY-hI-J1w" firstAttribute="top" secondItem="Xvq-6k-3o2" secondAttribute="bottom" constant="8" id="BOv-zp-Beq"/>
+                            <constraint firstItem="H43-GH-b5V" firstAttribute="trailing" secondItem="Xvq-6k-3o2" secondAttribute="trailing" id="WGi-sT-9TO"/>
+                            <constraint firstItem="Xvq-6k-3o2" firstAttribute="top" secondItem="H43-GH-b5V" secondAttribute="top" id="gL0-Tq-Qb7"/>
+                            <constraint firstItem="sXY-hI-J1w" firstAttribute="leading" secondItem="H43-GH-b5V" secondAttribute="leading" id="grL-go-N9b"/>
+                            <constraint firstItem="Xvq-6k-3o2" firstAttribute="leading" secondItem="H43-GH-b5V" secondAttribute="leading" id="hWv-wY-hLi"/>
+                            <constraint firstItem="H43-GH-b5V" firstAttribute="bottom" secondItem="sXY-hI-J1w" secondAttribute="bottom" id="jXt-hk-o3b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VEZ-KM-sWn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="YEu-C6-6ZI">
+                            <connections>
+                                <action selector="saveClick:" destination="63M-4i-QcF" id="eSD-1k-m3h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="subtitleText" destination="sXY-hI-J1w" id="8rP-7w-f4Z"/>
+                        <outlet property="titleText" destination="Xvq-6k-3o2" id="9cg-j8-G45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVu-R4-xOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="0vw-tS-0Uo" customClass="NewNoteBuilder">
+                    <connections>
+                        <outlet property="viewController" destination="63M-4i-QcF" id="EDv-kt-gyz"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="2326" y="1464"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

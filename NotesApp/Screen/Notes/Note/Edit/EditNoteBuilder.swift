@@ -8,18 +8,19 @@
 import UIKit
 import Moya
 
-class NoteDetailBuilder: NSObject {
+class EditNoteBuilder: NSObject {
 
     @IBOutlet weak var viewController: UIViewController!
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        guard let viewController = viewController as? NoteDetailViewController
+        guard let viewController = viewController as? NoteViewController
         else { fatalError() }
 
         viewController.bind(
-            viewModel: NoteDetailViewModel(
+            viewModel: EditNoteViewModel(
+                id: "",
                 api: API(
                     provider: MoyaProvider(
                         plugins: [

@@ -1,25 +1,15 @@
 //
-//  NoteDetailViewModel.swift
+//  NewNoteViewModel.swift
 //  NotesApp
 //
-//  Created by Ilya Korzhynskiy on 21.09.2021.
+//  Created by Ilya Korzhynskiy on 04.10.2021.
 //
 
 import UIKit
 
-class NoteDetailViewModel: ViewModel {
-
-    private let api: NotesAPIProtocol
-    private weak var viewController: NoteDetailViewController!
-
-    init(api: NotesAPIProtocol) {
-        self.api = api
-    }
-
-    func bind(viewController: NoteDetailViewController) {
-        self.viewController = viewController
-    }
-    func addNote(title: String, subtitle: String) {
+class NewNoteViewModel: NoteViewModel {
+    
+        private func saveNote() {
         api.create(title: title, subtitle: subtitle) { [weak self] note in
             switch note {
             case let .success(note):
@@ -35,5 +25,4 @@ class NoteDetailViewModel: ViewModel {
             }
         }
     }
-    
 }

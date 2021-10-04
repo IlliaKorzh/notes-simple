@@ -21,3 +21,5 @@ extension API: NotesAPIProtocol where MoyaTarget == Target.Note {
         request(target: .create(title: title, subtitle: subtitle), completion: completion)
     }
 }
+
+

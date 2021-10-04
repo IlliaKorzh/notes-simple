@@ -53,19 +53,19 @@ class NotesViewModel: ViewModel {
             }
         }
     }
-    func getNote(id: String) {
-        api.single(id: id) { note in
-            switch note {
-            case let .success(note):
-                self.noteDetail = note
-            case let .failure(error):
-                let alert = UIAlertController(
-                    title: "Warning",
-                    message: error.localizedDescription,
-                    preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.viewController.present(alert, animated: true, completion: nil)
-            }
-        }
-    }
+//    func getNote(id: String) {
+//        api.single(id: id) { note in
+//            switch note {
+//            case let .success(note):
+//                self.noteDetail = note
+//            case let .failure(error):
+//                let alert = UIAlertController(
+//                    title: "Warning",
+//                    message: error.localizedDescription,
+//                    preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                self.viewController.present(alert, animated: true, completion: nil)
+//            }
+//        }
+//    }
 }

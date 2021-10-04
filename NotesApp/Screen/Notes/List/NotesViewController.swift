@@ -38,14 +38,14 @@ class NotesViewController: ViewController<NotesViewModel> {
 extension NotesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.fetch().count
+        viewModel.notes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "com.cells.notes", for: indexPath)
         var configuration = cell.defaultContentConfiguration()
-        configuration.text = viewModel.fetch()[indexPath.row].title
-        configuration.secondaryText = viewModel.fetch()[indexPath.row].subtitle
+        configuration.text = viewModel.notes[indexPath.item].title
+        configuration.secondaryText = viewModel.notes[indexPath.item].subtitle
         cell.contentConfiguration = configuration
         return cell
     }
@@ -53,8 +53,9 @@ extension NotesViewController: UITableViewDataSource {
 
 extension NotesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedId = viewModel.fetch()[indexPath.row].id ?? ""
-        viewModel.getNote(id: selectedId)
+//        let selectedId = viewModel.fetch()[indexPath.row].id ?? ""
+//        viewModel.getNote(id: selectedId)
+        
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -64,9 +65,9 @@ extension NotesViewController: UITableViewDelegate {
 
 extension NotesViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! NoteDetailViewController
+        let vc = segue.destination as! NoteViewController
         if segue .identifier == "com.update.note.segue" {
-            vc.noteDetail = viewModel.notes[tableView.indexPathForSelectedRow!.row]
+//            vc.noteDetail = viewModel.notes[tableView.indexPathForSelectedRow!.row]
             vc.navigationItem.rightBarButtonItem?.isEnabled = false
         }
     }
