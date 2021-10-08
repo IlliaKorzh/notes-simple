@@ -28,8 +28,16 @@ extension DataBase {
             core.fetch(id: id)
         }
         
-        func empty() -> Note? {
+        func new() -> Note? {
             core.add()
+        }
+        
+        func delete(object: Note) {
+            core.delete(odject: object)
+        }
+        
+        func cleanData() {
+            core.clearCoreDataNotes()
         }
     }
 }

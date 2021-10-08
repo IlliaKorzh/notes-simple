@@ -32,7 +32,7 @@ class NoteViewController: ViewController<NoteViewModel> {
     
     // MARK: - Actions
     
-    @IBAction func saveClick(_ sender: Any) {
-        viewModel.save?()
+    @IBAction func saveClick(_ sender: UIBarButtonItem) {
+    
     }
 }

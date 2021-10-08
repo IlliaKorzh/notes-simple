@@ -13,7 +13,7 @@ class NotesViewModel: ViewModel {
     private let dataBase: DataBase.Notes
     private weak var viewController: NotesViewController!
     private(set) var notes: [Note] = []
-
+    
     init(api: NotesAPIProtocol, dataBase: DataBase.Notes) {
         self.api = api
         self.dataBase = dataBase
@@ -25,26 +25,45 @@ class NotesViewModel: ViewModel {
     
     func logout() {
         TokenHolder.shared.token = nil
+        dataBase.cleanData()
     }
-
+    
     func reloadData() {
         api.list { [weak self] notes in
             guard let self = self else { return }
-            
             self.viewController.tableView.refreshControl?.endRefreshing()
+            
             switch notes {
             case let .success(notes):
                 
                 notes.forEach { raw in
-                    
-                    guard let note = self.dataBase.empty()
-                    else { return assertionFailure("Should not be optional") }
-                    
-                    note.id = raw.id
-                    note.title = raw.title
-                    note.subtitle = raw.subtitle
+                    if self.notes.isEmpty {
+                        guard let note = self.dataBase.new()
+                        else { return assertionFailure("Should not be optional") }
+                        note.id = raw.id
+                        note.title = raw.title
+                        note.subtitle = raw.subtitle
+                    }
+                    let baseNotes = self.dataBase
+                        .all()
+                        .reduce(
+                            into: [String? : Note](),
+                            { partialResult, note in
+                                partialResult[note.id] = note
+                            }
+                        )
+                    if let existing = baseNotes[raw.id] {
+                        existing.id = raw.id
+                        existing.title = raw.title
+                        existing.subtitle = raw.subtitle
+                    } else {
+                        guard let note = self.dataBase.new()
+                        else { return assertionFailure("Should not be optional") }
+                        note.id = raw.id
+                        note.title = raw.title
+                        note.subtitle = raw.subtitle
+                    }
                 }
-                
                 self.notes = self.dataBase.all()
                 self.viewController.tableView.reloadData()
                 

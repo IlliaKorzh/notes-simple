@@ -68,6 +68,7 @@ extension DataBase {
         
         // MARK: - Core Data Stack
         
+        
         func add<T: NSManagedObject>() -> T? {
             let context = managedObjectContext
             guard
@@ -113,6 +114,20 @@ extension DataBase {
         func delete<T: NSManagedObject>(odject: T) {
             managedObjectContext.delete(odject)
             //        save()
+        }
+        
+        func clearCoreDataNotes() {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+            fetchRequest.returnsObjectsAsFaults = false
+            do {
+                let results = try managedObjectContext.fetch(fetchRequest)
+                for object in results {
+                    guard let objectData = object as? NSManagedObject else {continue}
+                    managedObjectContext.delete(objectData)
+                }
+            } catch let error {
+                print("Detele all data in -Note- error :", error)
+            }
         }
         
         func save() {
