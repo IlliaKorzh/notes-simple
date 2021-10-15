@@ -15,21 +15,23 @@ class NewNoteViewModel: NoteViewModel {
     init(api: NotesAPIProtocol, dataBase: DataBase.Notes) {
         self.dataBase = dataBase
         super.init(api: api)
-        
+        save = saveNote
     }
     
         private func saveNote() {
-
-        api.create(title: title!, subtitle: subtitle!) { [weak self] note in
+            let titleTxt = self.title
+            let subtitleTxt = self.subtitle
+        api.create(title: titleTxt!, subtitle: subtitleTxt!) { [weak self] note in
             switch note {
             case let .success(note):
                 guard let notee = self?.dataBase.new()
                 else { return assertionFailure("Should not be optional") }
-                
+                self?.title = note.title
+                self?.subtitle = note.subtitle
                 notee.id = note.id
                 notee.title = note.title
                 notee.subtitle = note.subtitle
-                notee.date = note.date
+                
                 
                 self?.viewController.navigationController?.popViewController(animated: true)
             case let .failure(error):

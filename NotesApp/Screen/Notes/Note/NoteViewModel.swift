@@ -24,5 +24,11 @@ class NoteViewModel: ViewModel {
         self.viewController = viewController
     }
     
+    func saveNew() {
+        if let completion = self.save {
+            completion()
+        }
+      }
+    
     
 }

@@ -28,11 +28,14 @@ class NoteViewController: ViewController<NoteViewModel> {
         viewModel.title = titleText.text
         viewModel.subtitle = subtitleText.text
 //        saveButtonItem.isEnabled = viewModel.save != nil
+        
     }
     
     // MARK: - Actions
     
     @IBAction func saveClick(_ sender: UIBarButtonItem) {
-    
+        viewModel.title = titleText.text
+        viewModel.subtitle = subtitleText.text
+        viewModel.saveNew()
     }
 }
