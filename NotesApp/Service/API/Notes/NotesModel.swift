@@ -12,6 +12,6 @@ extension API {
         let id: String
         let title: String
         let subtitle: String
-//        let date: Date
+        let date: String
     }
 }

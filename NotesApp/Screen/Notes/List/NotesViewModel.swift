@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class NotesViewModel: ViewModel {
     
     private let api: NotesAPIProtocol
@@ -43,6 +44,7 @@ class NotesViewModel: ViewModel {
                         note.id = raw.id
                         note.title = raw.title
                         note.subtitle = raw.subtitle
+                        note.date = raw.date
                     }
                     let baseNotes = self.dataBase
                         .all()
@@ -56,16 +58,20 @@ class NotesViewModel: ViewModel {
                         existing.id = raw.id
                         existing.title = raw.title
                         existing.subtitle = raw.subtitle
+                        existing.date = raw.date
                     } else {
                         guard let note = self.dataBase.new()
                         else { return assertionFailure("Should not be optional") }
                         note.id = raw.id
                         note.title = raw.title
                         note.subtitle = raw.subtitle
+                        note.date = raw.date
                     }
                 }
                 self.notes = self.dataBase.all()
                 self.viewController.tableView.reloadData()
+                
+                
                 
             case let .failure(error):
                 let alert = UIAlertController(
@@ -81,6 +87,8 @@ class NotesViewModel: ViewModel {
                     animated: true,
                     completion: nil)
             }
+            
         }
+        
     }
 }

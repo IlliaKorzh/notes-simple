@@ -31,6 +31,7 @@ class NewNoteViewModel: NoteViewModel {
                 notee.id = note.id
                 notee.title = note.title
                 notee.subtitle = note.subtitle
+                notee.date = note.date
                 
                 
                 self?.viewController.navigationController?.popViewController(animated: true)

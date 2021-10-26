@@ -85,6 +85,8 @@ extension DataBase {
         
         func fetch<T: NSManagedObject>() -> [T] {
             let request = T.fetchRequest()
+            let sort = NSSortDescriptor(key: #keyPath(Note.date), ascending: false)
+                request.sortDescriptors = [sort]
             do {
                 let result = try managedObjectContext.fetch(request)
                 return result as! [T]
@@ -119,6 +121,7 @@ extension DataBase {
         func clearCoreDataNotes() {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
             fetchRequest.returnsObjectsAsFaults = false
+            
             do {
                 let results = try managedObjectContext.fetch(fetchRequest)
                 for object in results {

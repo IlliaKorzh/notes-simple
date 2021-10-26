@@ -9,6 +9,8 @@ import UIKit
 
 class NotesViewController: ViewController<NotesViewModel> {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - Lifecycle
@@ -54,9 +56,18 @@ extension NotesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "com.cells.notes",
             for: indexPath)
+        
         var configuration = cell.defaultContentConfiguration()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let date = dateFormatter.date(from: viewModel.notes[indexPath.item].date!)
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+6")// GMT+3
+        let resultTime = dateFormatter.string(from: date!)
+        
         configuration.text = viewModel.notes[indexPath.item].title
-        configuration.secondaryText = viewModel.notes[indexPath.item].subtitle
+        configuration.secondaryText = resultTime + "\n" + viewModel.notes[indexPath.item].subtitle!
+        
         cell.contentConfiguration = configuration
         return cell
     }
