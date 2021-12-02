@@ -1,0 +1,13 @@
+//
+//  SessionState.swift
+//  NotesApp
+//
+//  Created by Ilya Korzhynskiy on 01.12.2021.
+//
+
+import Foundation
+
+struct SessionState: State {
+    var authToken: String
+    var isValid: Bool?
+}
