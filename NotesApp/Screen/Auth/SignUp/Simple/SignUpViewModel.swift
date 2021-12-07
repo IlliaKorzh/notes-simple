@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-class SignUpViewModel: ViewModel {
+final class SignUpViewModel: SignUpProtocol {
     
-    weak var viewController: SignUpViewController!
+    weak var viewController: SignUpViewController<SignUpViewModel>!
     private let api: UserAPIProtocol
     
     init(api: UserAPIProtocol) {
         self.api = api
     }
     
-    func bind(viewController: SignUpViewController) {
+    func bind(viewController: SignUpViewController<SignUpViewModel>) {
         self.viewController = viewController
     }
     

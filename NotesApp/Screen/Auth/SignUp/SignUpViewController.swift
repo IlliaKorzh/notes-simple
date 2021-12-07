@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: ViewController<SignUpViewModel> {
+class SignUpViewController<ViewModel: SignUpProtocol>: ViewController<ViewModel> {
 
     // MARK: - Outlets
     @IBOutlet weak var email: UITextField!

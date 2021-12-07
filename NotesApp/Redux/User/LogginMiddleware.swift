@@ -9,25 +9,36 @@ import Foundation
 
     // this where API do request 
 
-protocol Middleware {
-   func handle(action: Action) -> Action
 
-}
 
+
+//protocol Middleware {
+//   func handle(action: Action)
+//
+//}
+//
 //class SessionMiddleware: Middleware {
-//    let network: UserAPIProtocol!
-////   let store: Store!
-//   func handle(action: Action) -> Action {
+//    let network: UserAPIProtocol
+//    let store: Store<Any, Any>
+//
+//    init(network: UserAPIProtocol, store: Store<Any, Any>) {
+//        self.network = network
+//        self.store = store
+//
+//    }
+//
+//    func handle(action: Action) {
 //       if let action = action as? LoginAction {
-//           network.signIn(email: action.login, password: action.password) { apiToken in
+//           network.signIn(email: action.login, password: action.password) { [weak self] apiToken in
 //               if let apiToken = TokenHolder.shared.token {
+//                   let state = SessionState(authToken: apiToken)
 //                   let successAction = LoginSuccessAction(apiToken: apiToken)
-//                   self.store.reduce(action: successAction)
+//                   self?.store.reducer.reduce(action: successAction, state: state)
 //               }
-//               else if let error = error {
-//                   let failureAction = LoginFailureAction(error: error)
-//                   self.store.reduce(action: failureAction)
-//               }
+////               else if let error = error {
+////                   let failureAction = LoginFailureAction(error: error)
+////                   self.store.reduce(action: failureAction)
+////               }
 //           }
 //       }
 //   }
@@ -57,9 +68,9 @@ protocol Middleware {
 //    }
 //}
 //
-//public struct CompositeMiddleware<State, Action>: MiddlewareProtocol {
+//public struct CompositeMiddleware<State, Action>: Middleware {
 //
-//    public let middleware: Middleware<State, Action>
+//    public let middleware: Middleware
 //
 //    public init(_ middlewares: Middleware<State, Action>...) {
 //        let initial: Middleware<State, Action> = { store, action, next in next(action) }

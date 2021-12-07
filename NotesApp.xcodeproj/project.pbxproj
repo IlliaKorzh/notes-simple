@@ -27,12 +27,8 @@
 		B631AD9E26EA3E4100A2F2A7 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631AD9D26EA3E4100A2F2A7 /* NotesAppTests.swift */; };
 		B631ADA926EA3E4100A2F2A7 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631ADA826EA3E4100A2F2A7 /* NotesAppUITests.swift */; };
 		B63302A72757D2640075B2AD /* UserState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302A62757D2640075B2AD /* UserState.swift */; };
-		B63302AA2757D2E30075B2AD /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302A92757D2E30075B2AD /* Reducer.swift */; };
 		B63302AD2757D3240075B2AD /* LogginMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302AC2757D3240075B2AD /* LogginMiddleware.swift */; };
 		B63302B02757D4040075B2AD /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302AF2757D4040075B2AD /* UserAction.swift */; };
-		B63302B22757D52C0075B2AD /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302B12757D52C0075B2AD /* Action.swift */; };
-		B63302B42757D5680075B2AD /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302B32757D5680075B2AD /* State.swift */; };
-		B63302B62757D94A0075B2AD /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302B52757D94A0075B2AD /* SessionState.swift */; };
 		B63302B82758CA490075B2AD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302B72758CA490075B2AD /* Store.swift */; };
 		B640D6E226FA07CC006FA9C5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640D6E126FA07CC006FA9C5 /* SignUpViewModel.swift */; };
 		B640D6E426FA07DB006FA9C5 /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640D6E326FA07DB006FA9C5 /* SignUpBuilder.swift */; };
@@ -52,6 +48,13 @@
 		B660691B26F372F200E7A198 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660691A26F372F200E7A198 /* UserModel.swift */; };
 		B660E2522757999600E2C9AE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B660E2512757999600E2C9AE /* AppState.swift */; };
 		B68C5DB026F206A100706D1E /* UserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68C5DAF26F206A100706D1E /* UserTarget.swift */; };
+		B6DA62C6275E6E3B00CAE230 /* UserReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62C5275E6E3B00CAE230 /* UserReducer.swift */; };
+		B6DA62C8275E6FEF00CAE230 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62C7275E6FEF00CAE230 /* AppReducer.swift */; };
+		B6DA62CA275E703D00CAE230 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62C9275E703D00CAE230 /* AppStore.swift */; };
+		B6DA62CC275E714B00CAE230 /* SignUpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62CB275E714B00CAE230 /* SignUpProtocol.swift */; };
+		B6DA62CE275E741800CAE230 /* SignUpReduxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62CD275E741800CAE230 /* SignUpReduxViewModel.swift */; };
+		B6DA62D2275E76FD00CAE230 /* SignUpReduxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62D1275E76FD00CAE230 /* SignUpReduxBuilder.swift */; };
+		B6DA62D4275E779200CAE230 /* SignUpReduxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62D3275E779200CAE230 /* SignUpReduxViewController.swift */; };
 		B6DBBFD3270B2C2D00133B97 /* NewNoteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DBBFD2270B2C2D00133B97 /* NewNoteBuilder.swift */; };
 		B6DBBFD5270B2CBB00133B97 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DBBFD4270B2CBB00133B97 /* NoteViewModel.swift */; };
 		B6DBBFDB270B2F9400133B97 /* EditNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DBBFDA270B2F9400133B97 /* EditNoteViewModel.swift */; };
@@ -112,12 +115,8 @@
 		B631ADA826EA3E4100A2F2A7 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		B631ADAA26EA3E4100A2F2A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63302A62757D2640075B2AD /* UserState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserState.swift; sourceTree = "<group>"; };
-		B63302A92757D2E30075B2AD /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		B63302AC2757D3240075B2AD /* LogginMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginMiddleware.swift; sourceTree = "<group>"; };
 		B63302AF2757D4040075B2AD /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
-		B63302B12757D52C0075B2AD /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		B63302B32757D5680075B2AD /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		B63302B52757D94A0075B2AD /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
 		B63302B72758CA490075B2AD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B640D6E126FA07CC006FA9C5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		B640D6E326FA07DB006FA9C5 /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
@@ -137,6 +136,13 @@
 		B660691A26F372F200E7A198 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B660E2512757999600E2C9AE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B68C5DAF26F206A100706D1E /* UserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTarget.swift; sourceTree = "<group>"; };
+		B6DA62C5275E6E3B00CAE230 /* UserReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReducer.swift; sourceTree = "<group>"; };
+		B6DA62C7275E6FEF00CAE230 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		B6DA62C9275E703D00CAE230 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		B6DA62CB275E714B00CAE230 /* SignUpProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocol.swift; sourceTree = "<group>"; };
+		B6DA62CD275E741800CAE230 /* SignUpReduxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpReduxViewModel.swift; sourceTree = "<group>"; };
+		B6DA62D1275E76FD00CAE230 /* SignUpReduxBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpReduxBuilder.swift; sourceTree = "<group>"; };
+		B6DA62D3275E779200CAE230 /* SignUpReduxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpReduxViewController.swift; sourceTree = "<group>"; };
 		B6DBBFD2270B2C2D00133B97 /* NewNoteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteBuilder.swift; sourceTree = "<group>"; };
 		B6DBBFD4270B2CBB00133B97 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		B6DBBFDA270B2F9400133B97 /* EditNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewModel.swift; sourceTree = "<group>"; };
@@ -251,11 +257,7 @@
 		B631AD8226EA3E3E00A2F2A7 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
-				B63302AE2757D3F60075B2AD /* Action */,
-				B63302AB2757D2F90075B2AD /* Middleware */,
-				B63302A82757D2D30075B2AD /* Reducer */,
-				B660E24E2757980600E2C9AE /* State */,
-				B63302B72758CA490075B2AD /* Store.swift */,
+				B6DA62C3275E6D1F00CAE230 /* Redux */,
 				B64ABECB26F0EC6F000FEA0F /* Screen */,
 				B64ABEB726EF6452000FEA0F /* Service */,
 				B64ABED226F0ED24000FEA0F /* Misc */,
@@ -280,31 +282,6 @@
 				B631ADAA26EA3E4100A2F2A7 /* Info.plist */,
 			);
 			path = NotesAppUITests;
-			sourceTree = "<group>";
-		};
-		B63302A82757D2D30075B2AD /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				B63302A92757D2E30075B2AD /* Reducer.swift */,
-			);
-			path = Reducer;
-			sourceTree = "<group>";
-		};
-		B63302AB2757D2F90075B2AD /* Middleware */ = {
-			isa = PBXGroup;
-			children = (
-				B63302AC2757D3240075B2AD /* LogginMiddleware.swift */,
-			);
-			path = Middleware;
-			sourceTree = "<group>";
-		};
-		B63302AE2757D3F60075B2AD /* Action */ = {
-			isa = PBXGroup;
-			children = (
-				B63302AF2757D4040075B2AD /* UserAction.swift */,
-				B63302B12757D52C0075B2AD /* Action.swift */,
-			);
-			path = Action;
 			sourceTree = "<group>";
 		};
 		B640D6E526FA28E8006FA9C5 /* Note */ = {
@@ -362,9 +339,10 @@
 		B64ABECD26F0EC9E000FEA0F /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B6DA62CB275E714B00CAE230 /* SignUpProtocol.swift */,
 				B64ABEC426F09BAB000FEA0F /* SignUpViewController.swift */,
-				B640D6E126FA07CC006FA9C5 /* SignUpViewModel.swift */,
-				B640D6E326FA07DB006FA9C5 /* SignUpBuilder.swift */,
+				B6DA62D0275E742F00CAE230 /* Redux */,
+				B6DA62CF275E742600CAE230 /* Simple */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -450,15 +428,46 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
-		B660E24E2757980600E2C9AE /* State */ = {
+		B6DA62C3275E6D1F00CAE230 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
-				B63302B32757D5680075B2AD /* State.swift */,
+				B63302B72758CA490075B2AD /* Store.swift */,
+				B6DA62C9275E703D00CAE230 /* AppStore.swift */,
 				B660E2512757999600E2C9AE /* AppState.swift */,
-				B63302A62757D2640075B2AD /* UserState.swift */,
-				B63302B52757D94A0075B2AD /* SessionState.swift */,
+				B6DA62C7275E6FEF00CAE230 /* AppReducer.swift */,
+				B6DA62C4275E6D2700CAE230 /* User */,
 			);
-			path = State;
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		B6DA62C4275E6D2700CAE230 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B63302AF2757D4040075B2AD /* UserAction.swift */,
+				B63302A62757D2640075B2AD /* UserState.swift */,
+				B63302AC2757D3240075B2AD /* LogginMiddleware.swift */,
+				B6DA62C5275E6E3B00CAE230 /* UserReducer.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B6DA62CF275E742600CAE230 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				B640D6E126FA07CC006FA9C5 /* SignUpViewModel.swift */,
+				B640D6E326FA07DB006FA9C5 /* SignUpBuilder.swift */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		B6DA62D0275E742F00CAE230 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA62CD275E741800CAE230 /* SignUpReduxViewModel.swift */,
+				B6DA62D1275E76FD00CAE230 /* SignUpReduxBuilder.swift */,
+				B6DA62D3275E779200CAE230 /* SignUpReduxViewController.swift */,
+			);
+			path = Redux;
 			sourceTree = "<group>";
 		};
 		B6DBBFD6270B2EE700133B97 /* New */ = {
@@ -738,13 +747,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DA62CE275E741800CAE230 /* SignUpReduxViewModel.swift in Sources */,
 				B640D6E726FA290B006FA9C5 /* NoteViewController.swift in Sources */,
 				B62C409126F8B083006960ED /* SignInBuilder.swift in Sources */,
 				B63302AD2757D3240075B2AD /* LogginMiddleware.swift in Sources */,
-				B63302B42757D5680075B2AD /* State.swift in Sources */,
 				B6DBBFDD270B2FDE00133B97 /* NewNoteViewModel.swift in Sources */,
 				B63302B82758CA490075B2AD /* Store.swift in Sources */,
 				B64ABEBF26EF9075000FEA0F /* API.swift in Sources */,
+				B6DA62CA275E703D00CAE230 /* AppStore.swift in Sources */,
 				B631AD8826EA3E3E00A2F2A7 /* SignInViewController.swift in Sources */,
 				B62C408726F8A4E3006960ED /* NotesProtocol.swift in Sources */,
 				B6DBBFDB270B2F9400133B97 /* EditNoteViewModel.swift in Sources */,
@@ -753,19 +763,19 @@
 				B631AD8426EA3E3E00A2F2A7 /* AppDelegate.swift in Sources */,
 				B64ABEE626F10100000FEA0F /* ViewModel.swift in Sources */,
 				B62C408F26F8B071006960ED /* SignInViewModel.swift in Sources */,
+				B6DA62C6275E6E3B00CAE230 /* UserReducer.swift in Sources */,
 				B63302A72757D2640075B2AD /* UserState.swift in Sources */,
 				B660E2522757999600E2C9AE /* AppState.swift in Sources */,
 				B64ABEC726F0BE31000FEA0F /* NotesViewController.swift in Sources */,
 				B64ABEC526F09BAB000FEA0F /* SignUpViewController.swift in Sources */,
 				C2677B8A26F8D415005D30BF /* TokenHolder.swift in Sources */,
+				B6DA62CC275E714B00CAE230 /* SignUpProtocol.swift in Sources */,
 				B660691926F32D3900E7A198 /* UserProtocol.swift in Sources */,
-				B63302AA2757D2E30075B2AD /* Reducer.swift in Sources */,
-				B63302B62757D94A0075B2AD /* SessionState.swift in Sources */,
+				B6DA62D2275E76FD00CAE230 /* SignUpReduxBuilder.swift in Sources */,
 				C2D5541B270B54EA00C6F41E /* DataBase.swift in Sources */,
 				B640D6E226FA07CC006FA9C5 /* SignUpViewModel.swift in Sources */,
 				C2677B8E26F8D854005D30BF /* NotesBuilder.swift in Sources */,
 				B631AD8626EA3E3E00A2F2A7 /* SceneDelegate.swift in Sources */,
-				B63302B22757D52C0075B2AD /* Action.swift in Sources */,
 				B64ABEE826F10A1B000FEA0F /* MainBuilder.swift in Sources */,
 				B6DBBFD5270B2CBB00133B97 /* NoteViewModel.swift in Sources */,
 				C2677B9026F8DF52005D30BF /* MainSegue.swift in Sources */,
@@ -775,7 +785,9 @@
 				B640D6EB26FA29D4006FA9C5 /* EditNoteSegue.swift in Sources */,
 				B6DBBFD3270B2C2D00133B97 /* NewNoteBuilder.swift in Sources */,
 				B631AD8E26EA3E3E00A2F2A7 /* NotesApp.xcdatamodeld in Sources */,
+				B6DA62C8275E6FEF00CAE230 /* AppReducer.swift in Sources */,
 				B62C408926F8A4ED006960ED /* NotesAPI.swift in Sources */,
+				B6DA62D4275E779200CAE230 /* SignUpReduxViewController.swift in Sources */,
 				B64ABEDF26F0F1B1000FEA0F /* MainViewController.swift in Sources */,
 				C2677B8C26F8D811005D30BF /* NotesViewModel.swift in Sources */,
 				B62C408D26F8AA6E006960ED /* NotesTarget.swift in Sources */,

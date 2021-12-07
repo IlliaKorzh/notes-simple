@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FVZ-oL-YzW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FVZ-oL-YzW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -111,7 +111,7 @@
         <!--Sign up-->
         <scene sceneID="rcj-i4-Tp9">
             <objects>
-                <viewController id="eFK-j0-8ek" customClass="SignUpViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eFK-j0-8ek" customClass="SignUpReduxViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a5u-Q5-paG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,9 +171,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AM-Ct-njA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="lG0-LM-eRk" customClass="SignUpBuilder" customModule="NotesApp" customModuleProvider="target">
+                <customObject id="lG0-LM-eRk" customClass="SignUpReduxBuilder" customModule="NotesApp" customModuleProvider="target">
                     <connections>
-                        <outlet property="viewController" destination="eFK-j0-8ek" id="jiJ-cW-2MF"/>
+                        <outlet property="viewController" destination="eFK-j0-8ek" id="KxZ-Du-ck7"/>
                     </connections>
                 </customObject>
             </objects>

@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct AppState: State {
-    var userState: UserState?
-    var sessionState: SessionState?
+enum App {}
+
+extension App {
+    struct State {
+        var user: User
+    }
 }
