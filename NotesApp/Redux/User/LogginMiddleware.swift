@@ -9,8 +9,26 @@ import Foundation
 
     // this where API do request 
 
-
-
+let signInMiddleware: Middleware<App.State, Any> = { state, action, next in
+    
+    switch action {
+    case let action as LoginAction:
+        
+//        api.signIn(email: action.login, password: action.password) { user in
+//            print(user)
+//        }
+        break
+        
+    case let action as LoginSuccessAction:
+        break
+        
+    default:
+        break
+    }
+    
+    next(action)
+    
+}
 
 //protocol Middleware {
 //   func handle(action: Action)

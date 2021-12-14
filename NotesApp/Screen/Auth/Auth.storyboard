@@ -12,7 +12,7 @@
         <!--Sign in-->
         <scene sceneID="zYx-pg-ion">
             <objects>
-                <viewController id="dwZ-Cl-SI2" customClass="SignInViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dwZ-Cl-SI2" customClass="SignInReduxViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ucq-tp-aHL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCo-oa-7gu" sceneMemberID="firstResponder"/>
-                <customObject id="rUa-7F-mpf" customClass="SignInBuilder" customModule="NotesApp" customModuleProvider="target">
+                <customObject id="rUa-7F-mpf" customClass="SignInReduxBuilder" customModule="NotesApp" customModuleProvider="target">
                     <connections>
                         <outlet property="viewController" destination="dwZ-Cl-SI2" id="TgC-qg-4pT"/>
                     </connections>

@@ -7,13 +7,6 @@
 
 import Foundation
 
-    // make enum with variations and use it.
-//enum LoginAction: Action {
-//    case login(email: String, password: String)
-//    case loginSuccess(token: String?)
-//    case loginFailure(error: Error)
-//}
-
 struct LoginAction {
     var login: String
     var password: String
@@ -25,5 +18,5 @@ struct LoginSuccessAction {
 }
 
 struct LoginFailureAction {
-    var error: Error
+    var error: String 
 }

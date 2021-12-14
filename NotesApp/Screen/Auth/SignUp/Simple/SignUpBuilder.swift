@@ -16,7 +16,7 @@ class SignUpBuilder: NSObject {
         
         guard let viewController = viewController as? SignUpViewController<SignUpViewModel>
         else { fatalError() }
-//        
+//
 //        viewController.bind(
 //            viewModel: SignUpViewModel(
 //                api: API(provider: .init())

@@ -66,30 +66,3 @@ class DefaultStore<State, Action>: Store {
         return state
     }
 }
-//protocol StoreSubscriber {
-//    func newState(state: State)
-//}
-//
-//class Store<State, Action>: ObservableObject {
-//    @Published private(set) var state: State?
-//    let reducer: Reducer
-//    let middlewares: Middleware
-//
-//
-////        private var observers: Set<Observer> = []
-////        private let queue: DispatchQueue
-//
-//    public init (state: State?, reducer: Reducer, middleware middlewares: SessionMiddleware) {
-//        self.state = state
-//        self.reducer = reducer
-//        self.middlewares = middlewares
-//    }
-//
-////    func dispatch(_ action: Action?) {
-////        state = reducer.reduce(action: action, state: state)
-////        objectWillChange.send()
-////
-//
-////           subscribers.forEach { $0.newState(state: state!) }
-//       }
-//}

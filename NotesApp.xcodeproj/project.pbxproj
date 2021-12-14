@@ -30,6 +30,8 @@
 		B63302AD2757D3240075B2AD /* LogginMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302AC2757D3240075B2AD /* LogginMiddleware.swift */; };
 		B63302B02757D4040075B2AD /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302AF2757D4040075B2AD /* UserAction.swift */; };
 		B63302B82758CA490075B2AD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63302B72758CA490075B2AD /* Store.swift */; };
+		B63A8E6827623AD800B7BB91 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A8E6727623AD800B7BB91 /* Error.swift */; };
+		B63A8E6A27638A4100B7BB91 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A8E6927638A4100B7BB91 /* AppAction.swift */; };
 		B640D6E226FA07CC006FA9C5 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640D6E126FA07CC006FA9C5 /* SignUpViewModel.swift */; };
 		B640D6E426FA07DB006FA9C5 /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640D6E326FA07DB006FA9C5 /* SignUpBuilder.swift */; };
 		B640D6E726FA290B006FA9C5 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640D6E626FA290B006FA9C5 /* NoteViewController.swift */; };
@@ -55,6 +57,10 @@
 		B6DA62CE275E741800CAE230 /* SignUpReduxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62CD275E741800CAE230 /* SignUpReduxViewModel.swift */; };
 		B6DA62D2275E76FD00CAE230 /* SignUpReduxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62D1275E76FD00CAE230 /* SignUpReduxBuilder.swift */; };
 		B6DA62D4275E779200CAE230 /* SignUpReduxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62D3275E779200CAE230 /* SignUpReduxViewController.swift */; };
+		B6DA62D82760EF8100CAE230 /* SignInReduxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62D72760EF8100CAE230 /* SignInReduxViewModel.swift */; };
+		B6DA62DA2760EF9400CAE230 /* SignInReduxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62D92760EF9400CAE230 /* SignInReduxBuilder.swift */; };
+		B6DA62DC2760EFC000CAE230 /* SignInReduxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62DB2760EFC000CAE230 /* SignInReduxViewController.swift */; };
+		B6DA62DE2760EFE000CAE230 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA62DD2760EFE000CAE230 /* SignInProtocol.swift */; };
 		B6DBBFD3270B2C2D00133B97 /* NewNoteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DBBFD2270B2C2D00133B97 /* NewNoteBuilder.swift */; };
 		B6DBBFD5270B2CBB00133B97 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DBBFD4270B2CBB00133B97 /* NoteViewModel.swift */; };
 		B6DBBFDB270B2F9400133B97 /* EditNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DBBFDA270B2F9400133B97 /* EditNoteViewModel.swift */; };
@@ -118,6 +124,8 @@
 		B63302AC2757D3240075B2AD /* LogginMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginMiddleware.swift; sourceTree = "<group>"; };
 		B63302AF2757D4040075B2AD /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
 		B63302B72758CA490075B2AD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		B63A8E6727623AD800B7BB91 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		B63A8E6927638A4100B7BB91 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		B640D6E126FA07CC006FA9C5 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		B640D6E326FA07DB006FA9C5 /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		B640D6E626FA290B006FA9C5 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +151,10 @@
 		B6DA62CD275E741800CAE230 /* SignUpReduxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpReduxViewModel.swift; sourceTree = "<group>"; };
 		B6DA62D1275E76FD00CAE230 /* SignUpReduxBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpReduxBuilder.swift; sourceTree = "<group>"; };
 		B6DA62D3275E779200CAE230 /* SignUpReduxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpReduxViewController.swift; sourceTree = "<group>"; };
+		B6DA62D72760EF8100CAE230 /* SignInReduxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReduxViewModel.swift; sourceTree = "<group>"; };
+		B6DA62D92760EF9400CAE230 /* SignInReduxBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReduxBuilder.swift; sourceTree = "<group>"; };
+		B6DA62DB2760EFC000CAE230 /* SignInReduxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReduxViewController.swift; sourceTree = "<group>"; };
+		B6DA62DD2760EFE000CAE230 /* SignInProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
 		B6DBBFD2270B2C2D00133B97 /* NewNoteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteBuilder.swift; sourceTree = "<group>"; };
 		B6DBBFD4270B2CBB00133B97 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		B6DBBFDA270B2F9400133B97 /* EditNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewModel.swift; sourceTree = "<group>"; };
@@ -329,9 +341,10 @@
 		B64ABECC26F0EC93000FEA0F /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				B6DA62DD2760EFE000CAE230 /* SignInProtocol.swift */,
 				B631AD8726EA3E3E00A2F2A7 /* SignInViewController.swift */,
-				B62C408E26F8B071006960ED /* SignInViewModel.swift */,
-				B62C409026F8B083006960ED /* SignInBuilder.swift */,
+				B6DA62D62760EF4800CAE230 /* Simple */,
+				B6DA62D52760EF3C00CAE230 /* Redux */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -435,6 +448,8 @@
 				B6DA62C9275E703D00CAE230 /* AppStore.swift */,
 				B660E2512757999600E2C9AE /* AppState.swift */,
 				B6DA62C7275E6FEF00CAE230 /* AppReducer.swift */,
+				B63A8E6927638A4100B7BB91 /* AppAction.swift */,
+				B63A8E6727623AD800B7BB91 /* Error.swift */,
 				B6DA62C4275E6D2700CAE230 /* User */,
 			);
 			path = Redux;
@@ -468,6 +483,25 @@
 				B6DA62D3275E779200CAE230 /* SignUpReduxViewController.swift */,
 			);
 			path = Redux;
+			sourceTree = "<group>";
+		};
+		B6DA62D52760EF3C00CAE230 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA62D72760EF8100CAE230 /* SignInReduxViewModel.swift */,
+				B6DA62D92760EF9400CAE230 /* SignInReduxBuilder.swift */,
+				B6DA62DB2760EFC000CAE230 /* SignInReduxViewController.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		B6DA62D62760EF4800CAE230 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				B62C408E26F8B071006960ED /* SignInViewModel.swift */,
+				B62C409026F8B083006960ED /* SignInBuilder.swift */,
+			);
+			path = Simple;
 			sourceTree = "<group>";
 		};
 		B6DBBFD6270B2EE700133B97 /* New */ = {
@@ -752,8 +786,11 @@
 				B62C409126F8B083006960ED /* SignInBuilder.swift in Sources */,
 				B63302AD2757D3240075B2AD /* LogginMiddleware.swift in Sources */,
 				B6DBBFDD270B2FDE00133B97 /* NewNoteViewModel.swift in Sources */,
+				B6DA62DC2760EFC000CAE230 /* SignInReduxViewController.swift in Sources */,
 				B63302B82758CA490075B2AD /* Store.swift in Sources */,
 				B64ABEBF26EF9075000FEA0F /* API.swift in Sources */,
+				B6DA62D82760EF8100CAE230 /* SignInReduxViewModel.swift in Sources */,
+				B6DA62DA2760EF9400CAE230 /* SignInReduxBuilder.swift in Sources */,
 				B6DA62CA275E703D00CAE230 /* AppStore.swift in Sources */,
 				B631AD8826EA3E3E00A2F2A7 /* SignInViewController.swift in Sources */,
 				B62C408726F8A4E3006960ED /* NotesProtocol.swift in Sources */,
@@ -765,6 +802,7 @@
 				B62C408F26F8B071006960ED /* SignInViewModel.swift in Sources */,
 				B6DA62C6275E6E3B00CAE230 /* UserReducer.swift in Sources */,
 				B63302A72757D2640075B2AD /* UserState.swift in Sources */,
+				B6DA62DE2760EFE000CAE230 /* SignInProtocol.swift in Sources */,
 				B660E2522757999600E2C9AE /* AppState.swift in Sources */,
 				B64ABEC726F0BE31000FEA0F /* NotesViewController.swift in Sources */,
 				B64ABEC526F09BAB000FEA0F /* SignUpViewController.swift in Sources */,
@@ -777,8 +815,10 @@
 				C2677B8E26F8D854005D30BF /* NotesBuilder.swift in Sources */,
 				B631AD8626EA3E3E00A2F2A7 /* SceneDelegate.swift in Sources */,
 				B64ABEE826F10A1B000FEA0F /* MainBuilder.swift in Sources */,
+				B63A8E6827623AD800B7BB91 /* Error.swift in Sources */,
 				B6DBBFD5270B2CBB00133B97 /* NoteViewModel.swift in Sources */,
 				C2677B9026F8DF52005D30BF /* MainSegue.swift in Sources */,
+				B63A8E6A27638A4100B7BB91 /* AppAction.swift in Sources */,
 				B60869C92702FC930027250B /* DataBaseCore.swift in Sources */,
 				B68C5DB026F206A100706D1E /* UserTarget.swift in Sources */,
 				B660691B26F372F200E7A198 /* UserModel.swift in Sources */,

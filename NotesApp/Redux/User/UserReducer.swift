@@ -20,6 +20,9 @@ let userReducer: Reducer<App.State.User, Any> = { state, action in
     case let action as LoginFailureAction:
         return .unauthorised
         
+    case let action as ErrorUser:
+        return .unauthorised
+        
     default:
         return state
     }

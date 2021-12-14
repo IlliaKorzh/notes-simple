@@ -12,5 +12,6 @@ extension App.State {
         case unauthorised
         case authorising
         case authorised(token: String, id: String)
+        case fetchError(LoginFailureAction)
     }
 }

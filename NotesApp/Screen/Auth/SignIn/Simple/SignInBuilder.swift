@@ -14,13 +14,13 @@ class SignInBuilder: NSObject {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        guard let viewController = viewController as? SignInViewController
+        guard let viewController = viewController as? SignInViewController<SignInViewModel>
         else { fatalError() }
         
-        viewController.bind(
-            viewModel: SignInViewModel(
-                api: API(provider: .init())
-            )
-        )
+//        viewController.bind(
+//            viewModel: SignInViewModel(
+//                api: API(provider: .init())
+//            )
+//        )
     }
 }
